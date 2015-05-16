@@ -1,0 +1,17 @@
+@font-face {
+    font-family: engFont;
+    src: url(../fonts/SourceSansPro-Regular.otf);
+}
+@font-face {
+    font-family: thaiFont;
+    src: url(../fonts/RSU_Regular.ttf);
+}
+
+body {
+    font-family: engFont;
+}
+.content
+{
+	width:1280px;
+	margin: 0 auto;
+}
