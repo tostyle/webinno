@@ -10,8 +10,309 @@
 body {
     font-family: engFont;
 }
+.aboutUs ,.award,.career,.statInfomation
+{
+	font-family: thaiFont;
+}
+.thai-font
+{
+	font-family: thaiFont;
+}
+h2
+{
+	font-weight: bold;
+	color: #194570;
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+p
+{
+	margin-bottom: 1px;
+}
 .content
 {
 	width:1280px;
 	margin: 0 auto;
 }
+.homeSlider
+{
+	margin-top: 131px;
+}
+.homeLogo
+{
+	margin: 0 auto;
+	height: 356px;
+}
+.home-icon-div
+{
+	/*width: 62%;
+	margin: 0 auto;*/
+	text-align: center;
+	padding-top: 50px;
+}
+.home-icon
+{
+	display: inline-block;
+	/*float: left;*/
+	text-align: center;
+	margin-right: 150px;
+	width: 159px;
+}
+.home-icon.last
+{
+	margin-right: 0px;
+}
+
+.home-icon > h3
+{
+	font-weight: bold;
+	color: #194570;
+
+}
+/*
+stat information
+*/
+.statInfomation
+{
+	 background-image: url("../photo/statistics-information/pic-bg-statistics-information.jpg");
+	 min-height: 570px;
+}
+.statInfomation > div
+{
+	float: left;
+}
+.inno
+{
+	width: 840px;
+	padding-top: 44px;
+	padding-left: 44px;
+}
+.map
+{
+	width: 440px;
+	background-position:10px 22px;
+	 background-image: url("../photo/statistics-information/pic-thailand-map.png");
+	 background-repeat: no-repeat;
+	  min-height: 570px;
+}
+.stat-pic
+{
+	margin-top: 44px;
+}
+.stat-pic > div,.stat-pic > img
+{
+	float: left;
+
+}
+.stat-pic > div
+{
+	margin-right: 49px;
+}
+.stat-pic > img
+{
+	margin-right: 5px;
+}
+.inno-detail
+{
+	width: 100%;
+	height: 140px;
+	background-color:rgba(226,224,224,0.6);
+	margin-top: 286px;
+	margin-left: -44px;
+	/*opacity: 0.5;*/
+	padding-right: 54px;
+	padding-top: 20px;
+}
+.inno-detail-text
+{
+	float:right;
+}
+
+.our-service
+{
+	text-align: center;
+	width: 1000px;
+	margin:0 auto;
+}
+.service-header
+{
+	height: 91px;
+	color: #194570;
+	font-weight: bold;
+}
+/* about us*/
+.aboutUs
+{
+	background-color: #194570;
+	margin-top: 59px;
+ box-shadow: 0 8px 2px -2px #D9D5D5;
+}
+.aboutUs > div
+{
+	display: inline-block;
+	  vertical-align: top;
+
+}
+.aboutUs-detail
+{
+	padding-top: 41px;
+	padding-left: 52px;
+}
+.aboutUs-detail > h2
+{
+	font-weight: bold;
+	color: white;
+	  margin-top: 0px;
+  margin-bottom: 18px;
+}
+.aboutUs-detail  p
+{
+	font-size: 20px;
+	color: white;
+}
+.about-us-subject
+{
+	margin-top: 31px;
+}
+.about-us-subject-detail
+{
+
+	margin-left: 20px;
+	display: inline-block;
+	  vertical-align: top;
+}
+.about-us-subject-detail p 
+{
+	font-size: 20px;
+	color: white;
+	margin-bottom: 1px;
+
+}
+.about-us-subject-detail h3
+{
+	margin-top: 3px;
+	font-weight: bold;
+	color: white;
+}
+.about-us-read-more
+{
+	float: right;
+
+}
+.about-us-read-more h3
+{
+	font-weight: bold;
+	color: white;
+}
+.contactUs
+{
+	text-align: center;
+}
+.contactUs div
+{
+	display: inline-block;
+
+}
+.inno-footer
+{
+	background-color: #413D3D;
+	color: white;
+	min-height: 215px;
+	margin-top:30px;
+	padding: 20px;
+}
+.inno-footer h3
+{
+	font-weight: bold;
+	margin-top: 0px;
+	margin-right: 174px;
+}
+.inno-footer div
+{
+	float: left;
+}
+.footer-detail div
+{
+	float: left;
+	margin-right: 100px;
+}
+.footer-detail > p > span
+{
+	float: left;
+	width: 50px;
+}
+.award
+{
+	background-color: #FCF8F8;
+	text-align: center;
+	color:  #194570;
+}
+.award >div
+{
+	display: inline-block;
+}
+.award > div > h2
+{
+	
+	font-weight: bold;
+	margin-bottom: 1px;
+}
+.award-detail
+{
+	float: left;
+	margin-right: 84px;
+}
+.award-text
+{
+	padding-top: 40px;
+}
+.award-text h4
+{
+	margin-top:0px;
+}
+.award-pic img
+{
+	display: inline-block;
+}
+.career
+{
+	background-color:  #194570;
+}
+.career-detail
+{
+	width: 569px;
+	padding-top: 41px;
+	padding-left: 52px;
+	color: white;
+}
+.career div
+{
+	/*float: left;*/
+	display: inline-block;
+	vertical-align: top;
+	word-spacing: -1;
+}
+.career h2
+{
+	margin-top: 0px;
+}
+.career p 
+{
+	font-size: 20px;
+	margin-bottom:1px; 
+}
+p.open-position
+{
+	margin-top: 41px;
+	margin-bottom: 15px;
+}
+.clear
+{
+	clear: both;
+}
+.text-bold
+{
+	font-weight: bold;
+}
+
+
