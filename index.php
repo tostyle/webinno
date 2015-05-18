@@ -38,7 +38,8 @@
     
         
     <!-- Navigation -->
-    <nav class="navbar navbar-fixed-top" role="navigation">
+    <div>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -68,7 +69,7 @@
         </div>
         <!-- /.container -->
     </nav>
-
+    </div>
     <!-- Full Width Image Header with Logo -->
     <!-- Image backgrounds are set within the full-width-pics.css file. -->
   <!--   <header class="image-bg-fluid-height">
@@ -98,7 +99,7 @@
        <?php include('templates/career.php');?>
     </section>
     <section class="contactUs clear">
-       <?php// include('templates/contactUs.php');?>
+       <?php include('templates/contactUs.php');?>
     </section>
     <footer class="inno-footer">
         <?php include('templates/footer.php'); ?>
