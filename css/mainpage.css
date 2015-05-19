@@ -22,8 +22,6 @@ h2
 {
 	font-weight: bold;
 	color: #194570;
-	margin-top: 0px;
-	margin-bottom: 5px;
 }
 p
 {
@@ -32,6 +30,29 @@ p
 .navbar{
   
     width: 1280px;
+    height: 131px;
+    margin: 0 auto;
+    background-color: white;
+}
+.nav-container
+{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.navbar-header
+{
+	padding-top: 10px;
+}
+.navbar-collapse > div 
+{
+	float: right;
+}
+.navbar-default .navbar-nav>li>a {
+  color: #080808;
+}
+.navbar-default .navbar-nav>li>a:hover {
+  color: #194570;
+  font-weight: bold;
 }
 .content
 {
@@ -99,6 +120,10 @@ stat information
 	 background-repeat: no-repeat;
 	  min-height: 570px;
 }
+.full-pic
+{
+	width:1280px !important;
+}
 .stat-pic
 {
 	margin-top: 44px;
@@ -127,16 +152,40 @@ stat information
 	padding-right: 54px;
 	padding-top: 20px;
 }
+.inno-detail h2
+{
+
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
 .inno-detail-text
 {
 	float:right;
 }
+.our-service-head
+{
+	height: 91px;
+	text-align: center;
+	vertical-align: middle;
 
+}
+.our-service-head > h2
+{
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	margin-bottom: 0px;
+	margin-top: 40px;
+}
 .our-service
 {
 	text-align: center;
 	width: 1000px;
 	margin:0 auto;
+}
+.service
+{
+	height: 788px;
 }
 .service-header
 {

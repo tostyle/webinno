@@ -34,81 +34,41 @@
 
 <body>
     <div class="content">
-        
-    
-        
-    <!-- Navigation -->
-    <div>
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-    </div>
-    <!-- Full Width Image Header with Logo -->
-    <!-- Image backgrounds are set within the full-width-pics.css file. -->
-  <!--   <header class="image-bg-fluid-height">
-        <img class="img-responsive img-center" src="http://placehold.it/200x200&text=Logo" alt="">
-    </header> -->
-
-    <!-- Content Section -->
-    <section class="homeSlider">
-        <?php require('templates/homeSlider.php');?>
-    </section>
-    <section class="homeLogo">
-        <?php include('templates/homeLogo.php');?>
-    </section>
-    <section class="statInfomation clear">
-       <?php include('templates/statInfomation.php');?>
-    </section>
-    <section >
-       <?php include('templates/service.php');?>
-    </section>
-    <section class="aboutUs clear">
-       <?php include('templates/aboutUs.php');?>
-    </section>
-    <section class="award">
-       <?php include('templates/award.php');?>
-    </section>
-    <section class="career">
-       <?php include('templates/career.php');?>
-    </section>
-    <section class="contactUs clear">
-       <?php include('templates/contactUs.php');?>
-    </section>
-    <footer class="inno-footer">
-        <?php include('templates/footer.php'); ?>
-    </footer>
-   
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <?php include('templates/navigation.php');?>
+        </nav>
+        <!-- Content Section -->
+        <section class="homeSlider">
+            <?php require('templates/homeSlider.php');?>
+        </section>
+        <section class="homeLogo">
+            <?php include('templates/homeLogo.php');?>
+        </section>
+        <section class="statInfomation clear">
+           <?php include('templates/statInfomation.php');?>
+        </section>
+        <section class="service">
+           <?php include('templates/service.php');?>
+        </section>
+        <section class="aboutUs clear">
+           <?php include('templates/aboutUs.php');?>
+        </section>
+        <section class="award">
+           <?php include('templates/award.php');?>
+        </section>
+        <section class="career">
+           <?php include('templates/career.php');?>
+        </section>
+        <section class="contactUs clear">
+           <?php include('templates/contactUs.php');?>
+        </section>
+        <footer class="inno-footer">
+            <?php include('templates/footer.php'); ?>
+        </footer>
     </div>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
@@ -120,5 +80,4 @@
 });
     </script>
 </body>
-
 </html>
