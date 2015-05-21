@@ -54,6 +54,11 @@ p
   color: #194570;
   font-weight: bold;
 }
+.social-nav >li>a
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
 .content
 {
 	width:1280px;
@@ -325,7 +330,12 @@ stat information
 }
 .award-pic img
 {
+	padding-top: 9px;
 	display: inline-block;
+}
+.award-read-more
+{
+	padding-top: 14px;
 }
 .career
 {

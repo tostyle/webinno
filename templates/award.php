@@ -13,4 +13,7 @@
 			<img src="photo/award/pic-logo-award-04.png">
 		</div>		
 	</div>
+	<div class="clear text-right award-read-more" >
+		<h3><strong>READ MORE >>></strong></h3>
+	</div>
 </div>
