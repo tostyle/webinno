@@ -15,7 +15,9 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <div >
                      <ul class="nav navbar-nav social-nav">
-                        <li> <a href="#">TH | EN </a></li>
+                        <li> <a href="#" class="language-link link-active">TH</a></li>
+                        <li><a href="" class="language-link"> | </a>  </li>
+                        <li><a href="#" class="language-link">EN</a></li>
                          <li>
                             <a href="#"><img src="photo/head/icon-social-facebook.png" alt=""></a>
                         </li>

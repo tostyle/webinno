@@ -44,6 +44,16 @@ p
 {
 	font-weight: bold;
 }
+.link-active
+{
+	color: #194570;
+	font-weight:bold
+}
+.social-nav >li>a.language-link
+{
+	padding-left: 2px;
+	padding-right: 2px;
+}
 .navbar{
   
     width: 1280px;
@@ -54,7 +64,7 @@ p
 .nav-container
 {
 	padding-left: 30px;
-	padding-right: 30px;
+
 }
 .navbar-header
 {
@@ -73,8 +83,8 @@ p
 }
 .social-nav >li>a
 {
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 .content
 {
@@ -257,6 +267,10 @@ about us
 	padding-top: 41px;
 	padding-left: 52px;
 }
+.aboutUs-detail > div 
+{
+	margin-top: 15px;
+}
 .aboutUs-detail > h2
 {
 	font-weight: bold;
@@ -409,6 +423,7 @@ award
 {
 	padding-top: 14px;
 	margin-bottom: 24px;
+	  margin-right: -150px;
 }
 /*=================================================================================================================================
 career
