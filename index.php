@@ -38,7 +38,7 @@
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <?php include('templates/navigation.php');?>
         </nav>
-        
+     
         <!-- Content Section -->
         <section class="homeSlider" id="home-page">
             <?php require('templates/homeSlider.php');?>
