@@ -32,20 +32,21 @@
                         <li>
                             <a href="#">Home</a>
                         </li>
-                        <li>
-                            <a href="#">About Us</a>
+                         <li>
+                            <a href="#service-page">Service</a>
                         </li>
                         <li>
-                            <a href="#">Service</a>
+                            <a href="#aboutus-page">About Us</a>
+                        </li>
+                       
+                        <li>
+                            <a href="#award-page">Award</a>
                         </li>
                         <li>
-                            <a href="#">Award</a>
+                            <a href="#career-page">Career</a>
                         </li>
                         <li>
-                            <a href="#">Career</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact Us</a>
+                            <a href="#contactus-page">Contact Us</a>
                         </li>
                     </ul>
                 </div>

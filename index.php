@@ -38,8 +38,9 @@
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <?php include('templates/navigation.php');?>
         </nav>
+        
         <!-- Content Section -->
-        <section class="homeSlider">
+        <section class="homeSlider" id="home-page">
             <?php require('templates/homeSlider.php');?>
         </section>
         <section class="homeLogo">
@@ -48,19 +49,19 @@
         <section class="statInfomation clear">
            <?php include('templates/statInfomation.php');?>
         </section>
-        <section class="service">
+        <section class="service" id="service-page">
            <?php include('templates/service.php');?>
         </section>
-        <section class="aboutUs clear">
+        <section class="aboutUs clear" id="aboutus-page">
            <?php include('templates/aboutUs.php');?>
         </section>
-        <section class="award">
+        <section class="award" id="award-page">
            <?php include('templates/award.php');?>
         </section>
-        <section class="career">
+        <section class="career clear" id="career-page">
            <?php include('templates/career.php');?>
         </section>
-        <section class="contactUs clear">
+        <section class="contactUs " id="contactus-page">
            <?php include('templates/contactUs.php');?>
         </section>
         <footer class="inno-footer">

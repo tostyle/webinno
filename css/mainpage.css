@@ -1,6 +1,10 @@
 @font-face {
     font-family: engFont;
-    src: url(../fonts/SourceSansPro-Regular.otf);
+    src: url(../fonts/source_san/SourceSansPro-Regular.otf);
+}
+@font-face {
+    font-family: engFontBold;
+    src: url(../fonts/source_san/SourceSansPro-Bold.otf);
 }
 @font-face {
     font-family: thaiFont;
@@ -14,18 +18,31 @@ body {
 {
 	font-family: thaiFont;
 }
-.thai-font
+.thai-font,
 {
 	font-family: thaiFont;
 }
+.eng-font
+{
+	font-family: engFont;
+}
 h2
 {
+	font-family: engFontBold;
 	font-weight: bold;
 	color: #194570;
 }
 p
 {
 	margin-bottom: 1px;
+}
+.clear
+{
+	clear: both;
+}
+.text-bold
+{
+	font-weight: bold;
 }
 .navbar{
   
@@ -64,21 +81,29 @@ p
 	width:1280px;
 	margin: 0 auto;
 }
+/*=============================================================
+	-----------------------------------HOME page --------------
+================================================================
+*/
 .homeSlider
 {
 	margin-top: 131px;
 }
 .homeLogo
 {
-	margin: 0 auto;
+/*	margin: 0 auto;*/
+	display: table;
+	width: 100%;
 	height: 356px;
 }
 .home-icon-div
 {
-	/*width: 62%;
-	margin: 0 auto;*/
+	display: table-cell;
+	/*width: 62%;*/
+	/*margin: 0 auto;*/
 	text-align: center;
-	padding-top: 50px;
+vertical-align: middle;
+	/*padding-top: 50px;*/
 }
 .home-icon
 {
@@ -99,8 +124,9 @@ p
 	color: #194570;
 
 }
-/*
+/*===============================================================================================
 stat information
+=================================================================================================
 */
 .statInfomation
 {
@@ -150,7 +176,7 @@ stat information
 {
 	width: 100%;
 	height: 140px;
-	background-color:rgba(226,224,224,0.6);
+	background-color:rgba(231,239,242,0.9);
 	margin-top: 286px;
 	margin-left: -44px;
 	/*opacity: 0.5;*/
@@ -167,6 +193,10 @@ stat information
 {
 	float:right;
 }
+/*=======================================================================================================================
+service
+========================================================================================================================
+*/
 .our-service-head
 {
 	height: 91px;
@@ -198,7 +228,18 @@ stat information
 	color: #194570;
 	font-weight: bold;
 }
-/* about us*/
+.service-pic
+{
+	margin-top: 10px;
+}
+.service-read-more
+{
+	margin-top: 30px;
+}
+/*==================================================================================================================== 
+about us
+======================================================================================================================
+*/
 .aboutUs
 {
 	background-color: #194570;
@@ -262,10 +303,21 @@ stat information
 	font-weight: bold;
 	color: white;
 }
+/*======================================================================================================================
+contact us
+========================================================================================================================
+*/
 .contactUs
 {
 	text-align: center;
 }
+.contactUs h2
+{
+	line-height: 91px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
 .contactUs div
 {
 	display: inline-block;
@@ -299,9 +351,13 @@ stat information
 	float: left;
 	width: 50px;
 }
+/*========================================================================================================================
+award
+=========================================================================================================================
+*/
 .award
 {
-	background-color: #FCF8F8;
+	background-color: #F1F1F1;
 	text-align: center;
 	color:  #194570;
 }
@@ -311,32 +367,53 @@ stat information
 }
 .award > div > h2
 {
-	
+	margin-top: 58px;
 	font-weight: bold;
 	margin-bottom: 1px;
+}
+.award-logo
+{
+	margin-right: 84px;
 }
 .award-detail
 {
 	float: left;
-	margin-right: 84px;
+	
 }
 .award-text
 {
 	padding-top: 40px;
+	color: #194570;
+	font-size: 24px;
 }
 .award-text h4
 {
 	margin-top:0px;
 }
+.award-text-detail
+{
+	font-size: 22px;
+}
+.award-pic
+{
+	height: auto;
+	width: 100%;
+}
 .award-pic img
 {
 	padding-top: 9px;
-	display: inline-block;
+	/*display: inline-block;*/
+	float: left;
 }
 .award-read-more
 {
 	padding-top: 14px;
+	margin-bottom: 24px;
 }
+/*=================================================================================================================================
+career
+==================================================================================================================================
+*/
 .career
 {
 	background-color:  #194570;
@@ -357,6 +434,7 @@ stat information
 }
 .career h2
 {
+	color: white;
 	margin-top: 0px;
 }
 .career p 
@@ -369,13 +447,6 @@ p.open-position
 	margin-top: 41px;
 	margin-bottom: 15px;
 }
-.clear
-{
-	clear: both;
-}
-.text-bold
-{
-	font-weight: bold;
-}
+
 
 
