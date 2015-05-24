@@ -40,6 +40,14 @@ p
 {
 	clear: both;
 }
+.clear:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
 .text-bold
 {
 	font-weight: bold;
