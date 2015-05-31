@@ -49,12 +49,13 @@
         <section class="statInfomation clear">
            <?php include('templates/statInfomation.php');?>
         </section>
-        <section class="service" id="service-page">
-           <?php include('templates/service.php');?>
-        </section>
         <section class="aboutUs clear" id="aboutus-page">
            <?php include('templates/aboutUs.php');?>
         </section>
+        <section class="service" id="service-page">
+           <?php include('templates/service.php');?>
+        </section>
+        
         <section class="award" id="award-page">
            <?php include('templates/award.php');?>
         </section>

@@ -1,5 +1,5 @@
 <div>
-	<img src="photo/about-us/pic-about-us-en.jpg">
+	<!-- <img src="photo/about-us/pic-about-us-en.jpg"> -->
 </div><!--
 --><div class="aboutUs-detail">
 	<h2>ABOUT US</h2>

@@ -12,7 +12,7 @@
 }
 
 body {
-    font-family: engFont;
+    font-family: thaiFont;
 }
 .aboutUs ,.award,.career,.statInfomation
 {
@@ -24,11 +24,11 @@ body {
 }
 .eng-font
 {
-	font-family: engFont;
+	font-family: thaiFont;
 }
 h2
 {
-	font-family: engFontBold;
+	font-family: thaiFont;
 	font-weight: bold;
 	color: #194570;
 }
@@ -150,10 +150,13 @@ stat information
 {
 	 background-image: url("../photo/statistics-information/pic-bg-statistics-information.jpg");
 	 min-height: 570px;
+	  
+	box-shadow: 0 8px 2px -2px #D9D5D5;
 }
 .statInfomation > div
 {
 	float: left;
+
 }
 .inno
 {
@@ -193,7 +196,7 @@ stat information
 .inno-detail
 {
 	width: 100%;
-	height: 140px;
+	height: 150px;
 	background-color:rgba(231,239,242,0.9);
 	margin-top: 286px;
 	margin-left: -44px;
@@ -265,17 +268,20 @@ about us
 .aboutUs
 {
 	background-color: #194570;
-	margin-top: 59px;
+	 background-image: url("../photo/about-us/pic-about-us.jpg");
+	margin-top: 5px;
  box-shadow: 0 8px 2px -2px #D9D5D5;
 }
 .aboutUs > div
 {
-	display: inline-block;
-	  vertical-align: top;
+	/*display: inline-block;
+	  vertical-align: top;*/
 
 }
 .aboutUs-detail
 {
+
+	margin-left: 590px;
 	padding-top: 41px;
 	padding-left: 52px;
 }
@@ -286,18 +292,18 @@ about us
 .aboutUs-detail > h2
 {
 	font-weight: bold;
-	color: white;
+	color: #194570;
 	  margin-top: 0px;
   margin-bottom: 18px;
 }
 .aboutUs-detail  p
 {
 	font-size: 20px;
-	color: white;
+	color: #194570;
 }
 .about-us-subject
 {
-	margin-top: 31px;
+	margin-top: 24px;
 }
 .about-us-subject-detail
 {
@@ -309,7 +315,7 @@ about us
 .about-us-subject-detail p 
 {
 	font-size: 20px;
-	color: white;
+	color: #194570;
 	margin-bottom: 1px;
 
 }
@@ -317,17 +323,18 @@ about us
 {
 	margin-top: 3px;
 	font-weight: bold;
-	color: white;
+	color: #194570;
 }
 .about-us-read-more
 {
+	margin-right: 80px;
 	float: right;
 
 }
 .about-us-read-more h3
 {
 	font-weight: bold;
-	color: white;
+	color: #194570;
 }
 /*======================================================================================================================
 contact us
@@ -391,6 +398,10 @@ award
 {
 	display: inline-block;
 }
+.award-list
+{
+	display: inline-block;
+}
 .award > div > h2
 {
 	margin-top: 58px;
@@ -433,9 +444,9 @@ award
 }
 .award-read-more
 {
-	padding-top: 14px;
-	margin-bottom: 24px;
-	  margin-right: -150px;
+	padding-top: 10px;
+	margin-bottom: 10px;
+	  margin-right: 150px;
 }
 /*=================================================================================================================================
 career
