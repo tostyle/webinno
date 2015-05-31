@@ -17,7 +17,7 @@
 		<div class="clear"></div>
 	</div>
 	<div class="clear text-right award-read-more" >
-		<h3><strong>READ MORE >>></strong></h3>
+		<h3><strong><a href="#" data-toggle="modal" data-target="#awardModal">READ MORE >>></a></strong></h3>
 	</div>
 	<div>
 		<h2>OUR CLIENTS</h2>

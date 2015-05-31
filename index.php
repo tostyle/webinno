@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Full Width Pics - Start Bootstrap Template</title>
+    <title>Innovation Technology</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -69,6 +69,8 @@
             <?php include('templates/footer.php'); ?>
         </footer>
     </div>
+    <?php include('templates/modal-award.php'); ?>
+    <?php include('templates/modal-career.php'); ?>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
@@ -76,10 +78,19 @@
     <script src="js/jquery.bxslider.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-  $('.bxslider').bxSlider({
-    auto: true
-  });
-});
+          $('.bxslider').bxSlider({
+            auto: true
+          });
+           $('.carousel').carousel('pause');
+           $( ".career-link" ).hover(function() {
+              $('.career-pic img').attr('src','photo/careers/'+this.id+'.jpg');
+            });
+            $( ".career-link" ).click(function(event) {
+                var linkPosition = $('#'+this.id).text();
+                console.log(linkPosition);
+               $('.career-position').text(linkPosition);
+           });
+        });
     </script>
 </body>
 </html>

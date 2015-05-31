@@ -74,6 +74,10 @@ p
 	padding-left: 30px;
 
 }
+.navbar-nav
+{
+	font-size: 20px;
+}
 .navbar-header
 {
 	padding-top: 10px;
@@ -448,6 +452,10 @@ award
 	margin-bottom: 10px;
 	  margin-right: 150px;
 }
+.award-read-more a
+{
+	color: #194570;
+}
 /*=================================================================================================================================
 career
 ==================================================================================================================================
@@ -470,6 +478,10 @@ career
 	vertical-align: top;
 	word-spacing: -1;
 }
+.career-pic
+{
+	width: 50%;
+}
 .career h2
 {
 	color: white;
@@ -480,11 +492,28 @@ career
 	font-size: 20px;
 	margin-bottom:1px; 
 }
+.career-link,.career-link:hover,.career-link:active
+{
+	color: white;
+	text-decoration: none;
+}
 p.open-position
 {
 	margin-top: 41px;
 	margin-bottom: 15px;
 }
-
+/*
+===============================================================================================
+modal
+================================================================================================
+*/
+.modal-background
+{
+	background-color: #827C7C;
+}
+a.carousel-control.modal-slider-control
+{
+	background-image: none;
+}
 
 
