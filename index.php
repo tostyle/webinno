@@ -71,6 +71,7 @@
     </div>
     <?php include('templates/modal-award.php'); ?>
     <?php include('templates/modal-career.php'); ?>
+    <?php include('templates/modal-service.php'); ?>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->

@@ -155,7 +155,7 @@ stat information
 	 background-image: url("../photo/statistics-information/pic-bg-statistics-information.jpg");
 	 min-height: 570px;
 	  
-	box-shadow: 0 8px 2px -2px #D9D5D5;
+	box-shadow: 0 8px 2px -2px #999999;
 }
 .statInfomation > div
 {
@@ -228,28 +228,34 @@ service
 */
 .our-service-head
 {
-	height: 91px;
+	height: 114px;
 	text-align: center;
 	vertical-align: middle;
-
+display: inline-block;
 }
 .our-service-head > h2
 {
-	display: inline-block;
-	vertical-align: middle;
+	/*display: inline-block;
+	vertical-align: middle;*/
+	 line-height:114px;
+    vertical-align:middle;
 	text-align: center;
 	margin-bottom: 0px;
-	margin-top: 40px;
+	margin-top: 0px;
+	color: white;
 }
 .our-service
 {
-	text-align: center;
-	width: 1000px;
-	margin:0 auto;
+	display: inline-block;
+/*	text-align: center;
+	width: 1190px;
+	margin:0 auto;*/
 }
 .service
 {
-	height: 788px;
+	height: 721px;
+	background-color: #194570;
+	text-align: center;
 }
 .service-header
 {
@@ -259,7 +265,56 @@ service
 }
 .service-pic
 {
-	margin-top: 10px;
+	float: left;
+	/*margin-top: 10px;*/
+}
+#service-pic-1
+{
+	 background-image: url("../photo/our-service/pic-service-01-on.png");
+}
+#service-pic-1:hover
+{
+	 background-image: url("../photo/our-service/pic-service-01-over.png");
+}
+#service-pic-2
+{
+	 background-image: url("../photo/our-service/pic-service-02-on.png");
+}
+#service-pic-2:hover
+{
+	 background-image: url("../photo/our-service/pic-service-02-over.png");
+}
+#service-pic-3
+{
+	 background-image: url("../photo/our-service/pic-service-03-on.png");
+}
+#service-pic-3:hover
+{
+	 background-image: url("../photo/our-service/pic-service-03-over.png");
+}
+#service-pic-4
+{
+	 background-image: url("../photo/our-service/pic-service-04-on.png");
+}
+#service-pic-4:hover
+{
+	 background-image: url("../photo/our-service/pic-service-04-over.png");
+}
+.service-picture
+{	
+	width: 268px;
+	height: 554px;
+	float: left;
+	/*margin-top: 10px;*/
+	margin-right: 28px;
+}
+.service-picture:hover
+{
+	cursor: pointer;
+}
+.service-picture.last
+{
+	margin-right:0px;
 }
 .service-read-more
 {
@@ -274,7 +329,7 @@ about us
 	background-color: #194570;
 	 background-image: url("../photo/about-us/pic-about-us.jpg");
 	margin-top: 5px;
- box-shadow: 0 8px 2px -2px #D9D5D5;
+ box-shadow: 0 8px 2px -2px #999999;
 }
 .aboutUs > div
 {
@@ -492,10 +547,15 @@ career
 	font-size: 20px;
 	margin-bottom:1px; 
 }
-.career-link,.career-link:hover,.career-link:active
+
+.career-link,.career-link:active,.career-link:visited,.career-link:link
 {
 	color: white;
 	text-decoration: none;
+}
+.career-link:hover
+{
+	color : #FBED21;
 }
 p.open-position
 {
@@ -507,6 +567,17 @@ p.open-position
 modal
 ================================================================================================
 */
+div.modal-career
+{
+	background-color: #154472;
+	color: white;
+	font-size: 18px;
+}
+div.modal-career .close
+{
+	color: white;
+	opacity: 1;
+}
 .modal-background
 {
 	background-color: #827C7C;
