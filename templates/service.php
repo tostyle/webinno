@@ -5,12 +5,18 @@
 	<div class="service-pic clear">
         <a href="" ></a>
             <div class="service-picture" 
-                    data-target="#careerModal" 
+                    data-target="#serviceModal" 
                     data-toggle="modal" 
-                    id="service-pic-1" ></div>
-        <div class="service-picture" id="service-pic-2"></div>
-        <div class="service-picture" id="service-pic-3"></div>
-        <div class="service-picture last" id="service-pic-4"></div>
+                    id="service-pic-1" pic-name="01"></div>
+        <div class="service-picture" data-target="#serviceModal" 
+                    data-toggle="modal" 
+                    id="service-pic-2" pic-name="02"></div>
+        <div class="service-picture" data-target="#serviceModal" 
+                    data-toggle="modal" 
+                    id="service-pic-3" pic-name="03"></div>
+        <div class="service-picture last" data-target="#serviceModal" 
+                    data-toggle="modal" 
+                    id="service-pic-4" pic-name="04"></div>
        <!--  <img src="photo/our-service/pic-service-01-on.png">
         <img src="photo/our-service/pic-service-02-on.png">
         <img src="photo/our-service/pic-service-03-on.png">

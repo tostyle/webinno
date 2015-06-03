@@ -83,6 +83,12 @@
             auto: true
           });
            $('.carousel').carousel('pause');
+           $('.service-picture').click(function(event) {
+                console.log(this.id);
+                var pictureName =$('#'+this.id).attr('pic-name');
+                $('#service-detail-picture').attr('src','photo/our-service/pic-our-service-popup'+pictureName+'.png');
+                
+           });
            $( ".career-link" ).hover(function() {
               $('.career-pic img').attr('src','photo/careers/'+this.id+'.jpg');
             });
