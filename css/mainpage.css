@@ -578,6 +578,10 @@ div.modal-career .close
 	color: white;
 	opacity: 1;
 }
+div.modal-service-width
+{
+	width: 750px;
+}
 .modal-background
 {
 	background-color: #827C7C;
