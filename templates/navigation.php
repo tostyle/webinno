@@ -32,7 +32,7 @@
                 <div class="clear">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="#">Home</a>
+                            <a href="#home-page"  class="page-scroll">Home</a>
                         </li>
                          <li>
                             <a href="#service-page" class="page-scroll">Service</a>
