@@ -77,6 +77,8 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
           $('.bxslider').bxSlider({

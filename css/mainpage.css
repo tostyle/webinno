@@ -14,6 +14,15 @@
 body {
     font-family: thaiFont;
 }
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
 .aboutUs ,.award,.career,.statInfomation
 {
 	font-family: thaiFont;

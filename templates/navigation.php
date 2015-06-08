@@ -35,20 +35,20 @@
                             <a href="#">Home</a>
                         </li>
                          <li>
-                            <a href="#service-page">Service</a>
+                            <a href="#service-page" class="page-scroll">Service</a>
                         </li>
                         <li>
-                            <a href="#aboutus-page">About Us</a>
+                            <a href="#aboutus-page" class="page-scroll">About Us</a>
                         </li>
                        
                         <li>
-                            <a href="#award-page">Award</a>
+                            <a href="#award-page" class="page-scroll">Award</a>
                         </li>
                         <li>
-                            <a href="#career-page">Career</a>
+                            <a href="#career-page" class="page-scroll">Career</a>
                         </li>
                         <li>
-                            <a href="#contactus-page">Contact Us</a>
+                            <a href="#contactus-page" class="page-scroll">Contact Us</a>
                         </li>
                     </ul>
                 </div>
