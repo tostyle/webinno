@@ -35,12 +35,11 @@
                             <a href="#home-page"  class="page-scroll">Home</a>
                         </li>
                          <li>
-                            <a href="#service-page" class="page-scroll">Service</a>
-                        </li>
-                        <li>
                             <a href="#aboutus-page" class="page-scroll">About Us</a>
                         </li>
-                       
+                         <li>
+                            <a href="#service-page" class="page-scroll">Service</a>
+                        </li>
                         <li>
                             <a href="#award-page" class="page-scroll">Award</a>
                         </li>

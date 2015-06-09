@@ -13,8 +13,7 @@
 
 body {
     font-family: thaiFont;
-}
-body {
+	font-size: 62.5%;
     width: 100%;
     height: 100%;
 }
@@ -209,7 +208,7 @@ stat information
 .inno-detail
 {
 	width: 100%;
-	height: 150px;
+	min-height: 150px;
 	background-color:rgba(231,239,242,0.9);
 	margin-top: 286px;
 	margin-left: -44px;
@@ -229,7 +228,8 @@ stat information
 }
 .inno-detail-text > p
 {
-	font-size: 18px;
+	font-size: 1.8em;
+	/*font-size: 18px;*/
 }
 /*=======================================================================================================================
 service

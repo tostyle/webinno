@@ -43,6 +43,7 @@
         <section class="homeSlider" id="home-page">
             <?php require('templates/homeSlider.php');?>
         </section>
+
         <section class="homeLogo">
             <?php include('templates/homeLogo.php');?>
         </section>
@@ -72,6 +73,9 @@
     <?php include('templates/modal-award.php'); ?>
     <?php include('templates/modal-career.php'); ?>
     <?php include('templates/modal-service.php'); ?>
+    <?php include('templates/modal-firstPage.php'); ?>
+
+    
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
@@ -84,6 +88,7 @@
           $('.bxslider').bxSlider({
             auto: true
           });
+           $('#firstPageModal').modal('show');
            $('.carousel').carousel('pause');
            $('.service-picture').click(function(event) {
                 console.log(this.id);
