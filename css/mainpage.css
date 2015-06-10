@@ -164,6 +164,39 @@ vertical-align: middle;
 	color: #194570;
 
 }
+.home-icon:hover > h3
+{
+	color: #DF7425 ;
+}
+.logo-pic 
+{
+	width: 159px;
+	height: 159px;
+}
+.pic-money
+{
+	 background-image: url("../photo/icon-saving-money.png");
+}
+.pic-money:hover
+{
+	 background-image: url("../photo/icon-saving-money-over.png");
+}
+.pic-power
+{
+	 background-image: url("../photo/icon-saving-power.png");
+}
+.pic-power:hover
+{
+	 background-image: url("../photo/icon-saving-power-over.png");
+}
+.pic-award
+{
+	 background-image: url("../photo/icon-awards.png");
+}
+.pic-award:hover
+{
+	 background-image: url("../photo/icon-awards-over.png");
+}
 /*===============================================================================================
 stat information
 =================================================================================================
@@ -171,7 +204,7 @@ stat information
 .statInfomation
 {
 	 background-image: url("../photo/statistics-information/pic-bg-statistics-information.jpg");
-	 min-height: 570px;
+	 min-height: 634px;
 	  
 	box-shadow: 0 8px 2px -2px #999999;
 }
