@@ -27,6 +27,9 @@
                         <li>
                             <a href="#"><img src="photo/head/icon-social-twitter.png" alt=""></a>
                         </li>
+                        <li>
+                            <a href="#"><img src="photo/head/icon-social-youtube.png" alt=""></a>
+                        </li>
                     </ul>
                 </div>
                 <div class="clear">
