@@ -134,7 +134,7 @@ p
 /*	margin: 0 auto;*/
 	display: table;
 	width: 100%;
-	height: 356px;
+	height: 292px;
 }
 .home-icon-div
 {
@@ -168,6 +168,7 @@ vertical-align: middle;
 {
 	color: #DF7425 ;
 }
+
 .logo-pic 
 {
 	width: 159px;
@@ -177,10 +178,11 @@ vertical-align: middle;
 {
 	 background-image: url("../photo/icon-saving-money.png");
 }
-.pic-money:hover
+.pic-money:hover 
 {
 	 background-image: url("../photo/icon-saving-money-over.png");
 }
+
 .pic-power
 {
 	 background-image: url("../photo/icon-saving-power.png");
@@ -189,13 +191,13 @@ vertical-align: middle;
 {
 	 background-image: url("../photo/icon-saving-power-over.png");
 }
-.pic-award
+.pic-awards
 {
-	 background-image: url("../photo/icon-awards.png");
+	 background-image: url("../photo/icon-saving-awards.png");
 }
-.pic-award:hover
+.pic-awards:hover
 {
-	 background-image: url("../photo/icon-awards-over.png");
+	 background-image: url("../photo/icon-saving-awards-over.png");
 }
 /*===============================================================================================
 stat information
@@ -204,9 +206,8 @@ stat information
 .statInfomation
 {
 	 background-image: url("../photo/statistics-information/pic-bg-statistics-information.jpg");
-	 min-height: 634px;
+	 min-height: 570px;
 	  
-	box-shadow: 0 8px 2px -2px #999999;
 }
 .statInfomation > div
 {
@@ -253,7 +254,7 @@ stat information
 	width: 100%;
 	min-height: 150px;
 	background-color:rgba(231,239,242,0.9);
-	margin-top: 286px;
+	margin-top: 240px;
 	margin-left: -44px;
 	/*opacity: 0.5;*/
 	padding-right: 54px;
@@ -380,8 +381,7 @@ about us
 {
 	background-color: #194570;
 	 background-image: url("../photo/about-us/pic-about-us.jpg");
-	margin-top: 5px;
- box-shadow: 0 8px 2px -2px #999999;
+
 }
 .aboutUs > div
 {
@@ -632,11 +632,33 @@ div.modal-career .close
 }
 div.modal-service-width
 {
-	width: 750px;
+	width: 1220px;
 }
 a.carousel-control.modal-slider-control
 {
 	background-image: none;
 }
-
+.modal-firstpage
+{
+	width: 1230px;
+}
+#service-detail-picture
+{
+	margin: 0 auto;
+}
+.firstpage-picture
+{
+	position: relative;
+	width: 1180px;
+	height: 708px;
+	    background-image: url(../photo/index/pic-index-news.jpg);
+  
+    background-repeat: no-repeat, no-repeat;
+}
+#facebook-popup-link
+{
+	  position: absolute;
+  bottom: 50px;
+  left: 480px;
+}
 

@@ -93,7 +93,7 @@
            $('.service-picture').click(function(event) {
                 console.log(this.id);
                 var pictureName =$('#'+this.id).attr('pic-name');
-                $('#service-detail-picture').attr('src','photo/our-service/pic-our-service-popup'+pictureName+'.png');
+                $('#service-detail-picture').attr('src','photo/our-service/pic-our-service-popup'+pictureName+'.jpg');
                 
            });
            $( ".career-link" ).hover(function() {
@@ -104,7 +104,25 @@
                 console.log(linkPosition);
                $('.career-position').text(linkPosition);
            });
+            setHomeLogo('money');
+            setHomeLogo('power');
+            setHomeLogo('awards');
+
+
         });
+
+        function setHomeLogo(name)
+        {
+            $('#save-'+name).hover(
+               function () {
+                  $('.pic-'+name).css('background-image', 'url(' + "photo/icon-saving-"+name+"-over.png" + ')');
+               }, 
+                
+               function () {
+                   $('.pic-'+name).css('background-image', 'url(' + "photo/icon-saving-"+name+".png" + ')');
+               }
+            );
+        }
     </script>
 </body>
 </html>

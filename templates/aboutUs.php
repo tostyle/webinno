@@ -30,7 +30,7 @@
 			</div>
 		</div>
 		<div class="about-us-read-more">
-			<h3>REAM MORE >>> </h3>
+			<h3>READ MORE >>> </h3>
 		</div>
 	</div>
 </div>

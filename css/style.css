@@ -1,0 +1,29 @@
+
+html
+{
+    height: 100%;
+}
+body
+{
+    height: 100%
+}
+.navbar
+{
+    margin-bottom: 0px;
+}
+.full-height
+{
+height: 100%;
+  margin-top: -50px;
+  padding-top: 50px;
+    background-color: red;
+}
+ul.xx {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li
+{
+    float: left;
+}
