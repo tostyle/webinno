@@ -122,6 +122,15 @@
                    $('.pic-'+name).css('background-image', 'url(' + "photo/icon-saving-"+name+".png" + ')');
                }
             );
+            $('.pic-'+name).hover(
+               function () {
+                  $('.pic-'+name).css('background-image', 'url(' + "photo/icon-saving-"+name+"-over.png" + ')');
+               }, 
+                
+               function () {
+                   $('.pic-'+name).css('background-image', 'url(' + "photo/icon-saving-"+name+".png" + ')');
+               }
+            );
         }
     </script>
 </body>
