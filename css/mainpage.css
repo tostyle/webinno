@@ -574,7 +574,7 @@ career
 .career-detail
 {
 	width: 569px;
-	padding-top: 41px;
+	padding-top: 2%;
 	padding-left: 4%;
 	color: white;
 }
@@ -596,8 +596,13 @@ career
 }
 .career p 
 {
-	font-size: 1.3rem;
+	font-size: 2rem;
 	margin-bottom:1px; 
+}
+@media only screen and (max-width: 1080px) {
+
+   body { font-size: 1.4rem; }
+
 }
 
 
@@ -612,7 +617,7 @@ career
 }
 p.open-position
 {
-	margin-top: 41px;
+	margin-top: 4%;
 	margin-bottom: 15px;
 }
 /*
