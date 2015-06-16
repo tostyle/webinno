@@ -650,6 +650,7 @@ a.carousel-control.modal-slider-control
 }
 #service-detail-picture
 {
+	width: 100%;
 	margin: 0 auto;
 }
 .firstpage-picture
