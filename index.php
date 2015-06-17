@@ -93,7 +93,9 @@
            $('.service-picture').click(function(event) {
                 console.log(this.id);
                 var pictureName =$('#'+this.id).attr('pic-name');
-                $('#service-detail-picture').attr('src','photo/our-service/pic-our-service-popup'+pictureName+'.jpg');
+                // $('#service-detail-picture').attr('src','photo/our-service/pic-our-service-popup'+pictureName+'.jpg');
+                $('#service-detail-picture').css('background-image','url(photo/our-service/pic-our-service-popup'+pictureName+'.jpg)');
+                // $('.pic-'+name).css('background-image', 'url(' + "photo/icon-saving-"+name+"-over.png" + ')');
                 
            });
            $( ".career-link" ).hover(function() {

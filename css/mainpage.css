@@ -638,7 +638,7 @@ div.modal-career .close
 }
 div.modal-service-width
 {
-	width: 1220px;
+	width: 1180px;
 }
 a.carousel-control.modal-slider-control
 {
@@ -651,7 +651,9 @@ a.carousel-control.modal-slider-control
 #service-detail-picture
 {
 	width: 100%;
+	height:708px;
 	margin: 0 auto;
+	background-repeat: no-repeat;
 }
 .firstpage-picture
 {
@@ -679,4 +681,23 @@ a.carousel-control.modal-slider-control
   right: 0;
  /* left: 480px;*/
 }
+a.boxclose{
+    float:right;
+    margin-top:-5px;
+    margin-right:-5px;
+    cursor:pointer;
+    color: #fff;
+    border: 1px solid #AEAEAE;
+    border-radius: 30px;
+    background: #000000;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 11px 3px;       
+}
 
+.boxclose:before {
+    content: "×";
+
+}
