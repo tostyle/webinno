@@ -694,10 +694,26 @@ a.boxclose{
     font-weight: bold;
     display: inline-block;
     line-height: 0px;
-    padding: 11px 3px;       
+    padding: 11px 3px;      
+    text-decoration: none; 
+}
+a.boxclose.box-award
+{
+	position: absolute;
+	top:-5px;
+	left:880px;
+	z-index: 6000000000000;
+}
+a.boxclose:hover
+{
+	text-decoration: none; 
 }
 
 .boxclose:before {
     content: "×";
 
+}
+.modal-award
+{
+	border-radius: 6px;
 }

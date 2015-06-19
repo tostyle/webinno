@@ -1,16 +1,10 @@
 <div id="awardModal" class="modal" role="dialog">
   <div class="modal-dialog modal-lg modal-background">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-body">
-
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-      <div class="modal-body">
-        
-        <div>
+  <div class="modal-content modal-award">
+      <div style="position:relative">
+         <a class="boxclose box-award" id="boxclose" data-dismiss="modal"></a>
          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+         
           <!-- Indicators -->
        <!--    <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -20,6 +14,7 @@
 
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
+
             <div class="item active">
               <img src="photo/award/pic-award01.jpg" alt="...">
               <div class="carousel-caption">
@@ -51,9 +46,6 @@
           </a>
         </div>
         </div>
-
       </div>
-    </div>
-
   </div>
 </div>
