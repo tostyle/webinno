@@ -93,7 +93,10 @@
             auto: true
           });
           $('#firstPageModal').modal('show');
-           $('.carousel').carousel('pause');
+           $('.carousel').carousel({
+                interval :false
+           });
+          
            $('.carousel-service-1').carousel('pause');
            $('.carousel-service-2').carousel('pause');
            $('.carousel-service-3').carousel('pause');
@@ -113,7 +116,11 @@
             setHomeLogo('money');
             setHomeLogo('power');
             setHomeLogo('awards');
-
+            setDefauleServiceSlide(1);
+            setDefauleServiceSlide(2);
+            setDefauleServiceSlide(3);
+            setDefauleServiceSlide(4);
+//#carousel-generic-service-2 > div > div:nth-child(1)
 
         });
 
@@ -137,6 +144,14 @@
                    $('.pic-'+name).css('background-image', 'url(' + "photo/icon-saving-"+name+".png" + ')');
                }
             );
+        }
+        function setDefauleServiceSlide(serviceNo)
+        {
+             $('#modal-service-'+serviceNo).on('hidden.bs.modal', function () {
+                $('#carousel-generic-service-'+serviceNo+' > div > div:nth-child(2)').removeClass('active');
+                $('#carousel-generic-service-'+serviceNo+' > div > div:nth-child(1)').addClass('active');
+                
+            })
         }
         function reposition() {
         var modal = $(this),
