@@ -74,6 +74,10 @@
     <?php include('templates/modal-career.php'); ?>
     <?php include('templates/modal-service.php'); ?>
     <?php include('templates/modal-firstPage.php'); ?>
+    <?php include('templates/modal-service-1.php'); ?>
+    <?php include('templates/modal-service-2.php'); ?>
+    <?php include('templates/modal-service-3.php'); ?>
+    <?php// include('templates/modal-service-4.php'); ?>
 
     
     <!-- jQuery -->
@@ -88,8 +92,12 @@
           $('.bxslider').bxSlider({
             auto: true
           });
-           $('#firstPageModal').modal('show');
-           $('.carousel').carousel('pause');
+          // $('#firstPageModal').modal('show');
+           // $('.carousel').carousel('pause');
+           $('.carousel-service-1').carousel('pause');
+           $('.carousel-service-2').carousel('pause');
+           $('.carousel-service-3').carousel('pause');
+           $('.carousel-service-4').carousel('pause');
            $('.service-picture').click(function(event) {
                 console.log(this.id);
                 var pictureName =$('#'+this.id).attr('pic-name');
