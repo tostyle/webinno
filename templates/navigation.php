@@ -47,7 +47,7 @@
                             <a href="#award-page" class="page-scroll">Award</a>
                         </li>
                         <li>
-                            <a href="#career-page" class="page-scroll">Career</a>
+                            <a href="#career-page" class="page-scroll">Careers</a>
                         </li>
                         <li>
                             <a href="#contactus-page" class="page-scroll">Contact Us</a>
