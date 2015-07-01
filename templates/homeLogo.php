@@ -7,7 +7,7 @@
 	</div>
 	<div class="home-icon " id="logo-money">
 		<div class="logo-pic pic-money"></div>
-		<h3 id="save-money">Sav Money</h3>		
+		<h3 id="save-money">Save Money</h3>		
 		
 	</div>
 	
