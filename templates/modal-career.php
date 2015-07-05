@@ -45,7 +45,7 @@
             </div>
            
             <div class="form-group">
-              <label class="control-label col-sm-2" for="position">ตำแหน่งที่สนใจ</label>
+              <label class="control-label col-sm-2" for="position">ตำแหน่งล่าสุด</label>
               <div class="col-sm-8">
                 <input type="text" class="form-control" id="position" name="position" placeholder="">
               </div>

@@ -559,7 +559,7 @@ award
 	margin-bottom: 10px;
 	  margin-right: 150px;
 }
-.award-read-more a
+.award-read-more a ,.about-us-read-more a
 {
 	color: #194570;
 }
@@ -648,6 +648,10 @@ a.carousel-control.modal-slider-control
 {
 	width: 1180px;
 }
+.modal-aboutUs
+{
+	width: 1200px;
+}
 #service-detail-picture
 {
 	width: 100%;
@@ -663,6 +667,16 @@ a.carousel-control.modal-slider-control
 	width: 1180px;
 	height: 708px;
 	    background-image: url(../photo/index/pic-index-news.jpg);
+  
+    background-repeat: no-repeat, no-repeat;
+}
+.aboutUs-picture
+{
+	border-radius: 5px;
+	margin : 0 auto;
+	width: 1200px;
+	height: 700px;
+	   background-image: url(../photo/about-us/our-team.jpg);
   
     background-repeat: no-repeat, no-repeat;
 }

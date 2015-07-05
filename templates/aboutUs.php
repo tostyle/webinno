@@ -33,7 +33,7 @@
 			</div>
 		</div>
 		<div class="about-us-read-more">
-			<h3>READ MORE >>> </h3>
+			<h3><a href="#" data-toggle="modal" data-target="#aboutUsModal">READ MORE >>> </a></h3>
 		</div>
 	</div>
 </div>

@@ -72,6 +72,7 @@
         </footer>
     </div>
     <?php include('templates/modal-award.php'); ?>
+    <?php include('templates/modal-aboutUs.php'); ?>
     <?php include('templates/modal-career.php'); ?>
     <?php include('templates/modal-service.php'); ?>
     <?php include('templates/modal-firstPage.php'); ?>
