@@ -10,9 +10,47 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-    <meta name="description" content="innovation technology for enegy solution">
+    <meta name="description" content="innovation technology for energy solution">
     <meta name="author" content="innovation technology">
-    <meta name="keywords" content="innovation technology,innotechnology,inno,innotech">
+    <meta name="keywords" content="innovation technology,innotechnology,inno,innotech,
+          innovation,
+          technology,
+          inno,
+          energy,
+          consultant,
+          engineer,
+          engineering,
+          energy advisory,
+          building,
+          renewable,
+          building service engineering,
+          renewable energy advisory,
+          productivity,
+          save energy,
+          saving energy,
+          operation,
+          maintenance,
+          environment,
+          Thailand,
+          Green,
+          Facility Management,
+          Mechanical Engineering,
+          Electricity,
+          Energy Efficiency,
+          Alternative Energy,
+          Management,
+          Facility,
+          ประหยัดพลังงาน,
+          วิศวกรพลังงาน,
+          อินโนเวชั่น,
+          งานวิศวกร,
+          ลดต้นทุนด้านพลังงาน,
+          ประหยัดไฟ,
+          การอนุรักษ์พลังงาน,
+          มาตรการประหยัดพลังงาน,
+          พลังงาน,
+          งานระบบอาคาร,
+          หลักสูตรอบรมด้านพลังงาน">
 
     <title>Innovation Technology</title>
 

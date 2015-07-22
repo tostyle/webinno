@@ -19,6 +19,6 @@
 	<p>Ladyao,Chatuchak,Bangkok 10900</p>
 	<p><span>Tel : </span> 66(0)29414080-1 , 66(0)29410751-2</p>
 	<p><span>Fax : </span> 66(0)29414082 , 66(0)29410753</p>
-	<p><span>Email : </span> info@inno.co.th</p>
+	<p><span>Email : </span> contact@inno.co.th</p>
 	<p class="map-download"><a href="photo/map/map.jpg">ดาวโหลดแผนที่</a></p>
 </div>
