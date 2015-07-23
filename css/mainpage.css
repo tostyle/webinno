@@ -680,6 +680,20 @@ a.carousel-control.modal-slider-control
   
     background-repeat: no-repeat, no-repeat;
 }
+.aboutUs-picture > img 
+{
+	float: left;
+}
+.team-detail
+{
+	cursor: pointer;
+}
+.aboutUs-detail-picture
+{
+	width: 1100px;
+	height: 600px;
+	 background-repeat: no-repeat, no-repeat;
+}
 .map-download a
 {
 	color: #DF7425 ;

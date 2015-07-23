@@ -136,7 +136,7 @@
            $('.carousel').carousel({
                 interval :false
            });
-          
+
            $('.carousel-service-1').carousel('pause');
            $('.carousel-service-2').carousel('pause');
            $('.carousel-service-3').carousel('pause');
@@ -144,6 +144,13 @@
            $('.service-picture').click(function(event) {
              $('.carousel').carousel('pause');
              
+           });
+           $('.team-detail').click(function(event) {
+              // $("#aboutUsDetailModal").modal("show");
+              $('.aboutUs-detail-picture').css('background-image', 'url(' + "photo/our-team/"+this.id+"-detail.jpg" + ')');
+           });
+           $('.aboutUs-detail-close').click(function(event) {
+              $("#aboutUsDetailModal").modal("hide");
            });
            $( ".career-link" ).hover(function() {
               $('.career-pic img').attr('src','photo/careers/'+this.id+'.jpg');
@@ -160,7 +167,6 @@
             setDefauleServiceSlide(2);
             setDefauleServiceSlide(3);
             setDefauleServiceSlide(4);
-//#carousel-generic-service-2 > div > div:nth-child(1)
 
         });
 
