@@ -684,7 +684,7 @@ a.carousel-control.modal-slider-control
 {
 	float: left;
 }
-.team-detail
+.team-detail , .aboutUs-detail-picture
 {
 	cursor: pointer;
 }

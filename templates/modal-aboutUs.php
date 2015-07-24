@@ -23,7 +23,7 @@
   <div class="modal-dialog modal-lg modal-background modal-aboutUs">
     <!-- Modal content-->
     <div class="modal-content aboutUs-detail-picture">
-        <a class="boxclose aboutUs-detail-close" id="boxclose" ></a>
+       
     </div>
   </div>
 </div>

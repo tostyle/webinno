@@ -149,7 +149,7 @@
               // $("#aboutUsDetailModal").modal("show");
               $('.aboutUs-detail-picture').css('background-image', 'url(' + "photo/our-team/"+this.id+"-detail.jpg" + ')');
            });
-           $('.aboutUs-detail-close').click(function(event) {
+           $('.aboutUs-detail-picture').click(function(event) {
               $("#aboutUsDetailModal").modal("hide");
            });
            $( ".career-link" ).hover(function() {
