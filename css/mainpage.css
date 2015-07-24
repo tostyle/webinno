@@ -578,12 +578,18 @@ career
 	padding-left: 4%;
 	color: white;
 }
+
 .career div
 {
 	/*float: left;*/
 	display: inline-block;
+	
 	vertical-align: top;
 	word-spacing: -1;
+}
+.career-pic ,.career-detail
+{
+	height: 463px;
 }
 .career-pic
 {
