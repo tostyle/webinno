@@ -1,5 +1,5 @@
 <div class="our-service-head">
-    <h2>OUR SERVICE</h2>
+    <h2>OUR SERVICES</h2>
 </div>
 <div class="our-service">
 	<div class="service-pic clear">

@@ -41,10 +41,10 @@
                             <a href="#aboutus-page" class="page-scroll">About Us</a>
                         </li>
                          <li>
-                            <a href="#service-page" class="page-scroll">Service</a>
+                            <a href="#service-page" class="page-scroll">Our Services</a>
                         </li>
                         <li>
-                            <a href="#award-page" class="page-scroll">Award</a>
+                            <a href="#award-page" class="page-scroll">Awards</a>
                         </li>
                         <li>
                             <a href="#career-page" class="page-scroll">Careers</a>

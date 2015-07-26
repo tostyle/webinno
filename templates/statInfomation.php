@@ -1,5 +1,5 @@
 <div class="inno">
-	<h2 class="text-center">STATISTICS INFORMATION</h2>	
+	<h2 class="text-center">STATISTIC INFORMATION</h2>	
 	<div class="stat-pic">
 		<div>
 			<img src="photo/statistics-information/pic-2014-power.png">
@@ -9,7 +9,7 @@
 		<div>
 			<img src="photo/statistics-information/pic-2014-payback.png">
 			<img src="photo/statistics-information/pic-2015.png">
-			<h4 class="text-center"><strong>Pay Back</strong></h4>	
+			<h4 class="text-center"><strong>PayBack</strong></h4>	
 		</div>
 		<div>
 			<img src="photo/statistics-information/pic-2014-prize.png">
