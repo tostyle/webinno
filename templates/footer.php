@@ -3,12 +3,14 @@
 	<h3>INNOVATION TECHNOLOGY</h3>
 	<div>
 		<p>Home</p>
-			<p>Service</p>
-			<p>Career</p>
+			<p>Our Service</p>
+<p>About Us</p>
+			
 	</div>
 	<div>
-		<p>About Us</p>
-			<p>Awards</p>
+	<p>Awards</p>
+		<p>Careers</p>
+			
 			<p>Contact Us</p>
 	</div>
 	
