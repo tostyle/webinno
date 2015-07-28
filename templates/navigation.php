@@ -41,7 +41,7 @@
                             <a href="#aboutus-page" class="page-scroll">About Us</a>
                         </li>
                          <li>
-                            <a href="#service-page" class="page-scroll">Our Services</a>
+                            <a href="#service-page" class="page-scroll">Service</a>
                         </li>
                         <li>
                             <a href="#award-page" class="page-scroll">Awards</a>
