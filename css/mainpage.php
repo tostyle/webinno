@@ -649,7 +649,7 @@ a.carousel-control.modal-slider-control
 }
 .modal-firstpage
 {
-	width: 1180px;
+	width: 1038px;
 }
 #service-detail-picture
 {
@@ -663,7 +663,7 @@ a.carousel-control.modal-slider-control
 	border-radius: 5px;
 	margin : 0 auto;
 	position: relative;
-	width: 1180px;
+	width: 1038px;
 	height: 708px;
 	    background-image: url(../photo/index/pic-index-news.jpg);
   
