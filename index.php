@@ -7,7 +7,7 @@
 ?>
 <head>
 
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type"  content="text/html" charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <meta name="description" content="innovation technology for energy solution">
@@ -129,10 +129,23 @@
     <script src="js/scrolling-nav.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
+          $('#submitCareerForm').click(function(event) {
+            var formData = $('#registerForm').serialize();
+            $.ajax({
+              url: 'libs/sendMail.php',
+              type: 'POST',
+              dataType: 'json',
+              data: formData,
+            })
+            .done(function() {
+              alert('ส่งอีเมล์ถึง HR เรียบร้อย');
+            });
+            
+          });
           $('.bxslider').bxSlider({
             auto: true
           });
-          $('#firstPageModal').modal('show');
+          // $('#firstPageModal').modal('show');
            $('.carousel').carousel({
                 interval :false
            });
