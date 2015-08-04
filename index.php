@@ -145,7 +145,7 @@
           $('.bxslider').bxSlider({
             auto: true
           });
-          // $('#firstPageModal').modal('show');
+          $('#firstPageModal').modal('show');
            $('.carousel').carousel({
                 interval :false
            });
