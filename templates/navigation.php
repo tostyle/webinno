@@ -34,24 +34,11 @@
                 </div>
                 <div class="clear">
                     <ul class="nav navbar-nav">
-                        <li>
-                            <a href="#home-page"  class="page-scroll">Home</a>
-                        </li>
-                         <li>
-                            <a href="#aboutus-page" class="page-scroll">About Us</a>
-                        </li>
-                         <li>
-                            <a href="#service-page" class="page-scroll">Service</a>
-                        </li>
-                        <li>
-                            <a href="#award-page" class="page-scroll">Awards</a>
-                        </li>
-                        <li>
-                            <a href="#career-page" class="page-scroll">Careers</a>
-                        </li>
-                        <li>
-                            <a href="#contactus-page" class="page-scroll">Contact Us</a>
-                        </li>
+                        <?php foreach ($contents['menu'] as $key => $menu) :?>
+                            <li>
+                                <a href="#<?=$menu['name']?>-page"  class="page-scroll"><?=$menu['detail']?></a>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
                 

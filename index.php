@@ -4,6 +4,29 @@
  ini_set('display_errors', 1);
  error_reporting(E_ALL);
 
+  require_once('libs/connect.php');
+  require_once('libs/class/menu.php');
+  require_once('libs/class/home.php');
+  require_once('libs/class/homeLogo.php');
+  require_once('libs/controllers/menuController.php');
+  require_once('libs/controllers/homeController.php');
+  require_once('libs/controllers/homeLogoController.php');
+
+  /* Models */
+  $menu = new \Model\Menu($db);
+  $home = new \Model\Home($db);
+  $homeLogo = new \Model\HomeLogo($db);
+  /* Controllers */
+  $menuController = new \Controller\Menu();
+  $homeController = new \Controller\Home();
+  $homeLogoController = new \Controller\HomeLogo();
+  
+  $contents['menu'] = $menuController->getContent( $menu );
+  $contents['home'] = $homeController->getContent( $home );
+  $contents['homeLogo'] = $homeLogoController->getContent( $homeLogo );
+
+  $photos['homeLogo'] = $homeLogoController->getPhotoContent( $homeLogo );
+
 ?>
 <head>
 
@@ -60,7 +83,7 @@
 
     <!-- Custom CSS -->
  <!--    <link href="css/full-width-pics.css" rel="stylesheet"> -->
-    <link href="css/mainpage.css" rel="stylesheet">
+    <link href="css/mainpage.php" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -80,6 +103,7 @@
      
         <!-- Content Section -->
         <section class="homeSlider" id="home-page">
+        
             <?php require('templates/homeSlider.php');?>
         </section>
 
@@ -128,7 +152,9 @@
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
     <script type="text/javascript">
+      var homeLogoPics = <?=json_encode( $photos['homeLogo'])?> ; 
         $(document).ready(function(){
+          // $('#firstPageModal').modal('show');
           $('#submitCareerForm').click(function(event) {
             var formData = $('#registerForm').serialize();
             $.ajax({
@@ -145,7 +171,7 @@
           $('.bxslider').bxSlider({
             auto: true
           });
-          $('#firstPageModal').modal('show');
+          
            $('.carousel').carousel({
                 interval :false
            });
@@ -185,22 +211,25 @@
 
         function setHomeLogo(name)
         {
+          var normalPic = homeLogoPics[name]['pic-'+name+'-normal'];
+          var hoverPic =  homeLogoPics[name]['pic-'+name+'-over'];
+          $('.pic-'+name).css('background-image', 'url(' + normalPic + ')');
             $('#save-'+name).hover(
                function () {
-                  $('.pic-'+name).css('background-image', 'url(' + "photo/icon-saving-"+name+"-over.png" + ')');
+                  $('.pic-'+name).css('background-image', 'url(' + hoverPic + ')');
                }, 
                 
                function () {
-                   $('.pic-'+name).css('background-image', 'url(' + "photo/icon-saving-"+name+".png" + ')');
+                   $('.pic-'+name).css('background-image', 'url(' + normalPic + ')');
                }
             );
             $('.pic-'+name).hover(
                function () {
-                  $('.pic-'+name).css('background-image', 'url(' + "photo/icon-saving-"+name+"-over.png" + ')');
+                  $('.pic-'+name).css('background-image', 'url(' + hoverPic + ')');
                }, 
                 
                function () {
-                   $('.pic-'+name).css('background-image', 'url(' + "photo/icon-saving-"+name+".png" + ')');
+                   $('.pic-'+name).css('background-image', 'url(' + normalPic + ')');
                }
             );
         }

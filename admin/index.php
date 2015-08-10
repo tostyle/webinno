@@ -24,7 +24,7 @@ session_start();
 
     //set view template folder
     $view = $app->view();
-    $view->setTemplatesDirectory('./templates/admin');
+    $view->setTemplatesDirectory('./../templates/admin');
     //routes
     $app->get('/', 'home');
    
@@ -33,7 +33,6 @@ session_start();
     function home($username='')
     {
         $app = Slim::getInstance();
-        echo 'zxcxcx';
-        // $app->render('login-form.php',array('username'=>$username));
+        $app->render('loginAdmin.html');
     }
   

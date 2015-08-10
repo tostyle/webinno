@@ -177,7 +177,7 @@ vertical-align: middle;
 	width: 159px;
 	height: 159px;
 }
-.pic-money
+/*.pic-money
 {
 	 background-image: url("../photo/icon-saving-money.png");
 }
@@ -201,7 +201,7 @@ vertical-align: middle;
 .pic-awards:hover
 {
 	 background-image: url("../photo/icon-saving-awards-over.png");
-}
+}*/
 /*===============================================================================================
 stat information
 =================================================================================================
@@ -562,7 +562,7 @@ award
 	margin-bottom: 10px;
 	  margin-right: 150px;
 }
-.award-read-more a
+.award-read-more a ,.about-us-read-more a
 {
 	color: #194570;
 }
@@ -581,12 +581,18 @@ career
 	padding-left: 4%;
 	color: white;
 }
+
 .career div
 {
 	/*float: left;*/
 	display: inline-block;
+	
 	vertical-align: top;
 	word-spacing: -1;
+}
+.career-pic ,.career-detail
+{
+	height: 463px;
 }
 .career-pic
 {
@@ -651,6 +657,10 @@ a.carousel-control.modal-slider-control
 {
 	width: 1038px;
 }
+.modal-aboutUs
+{
+	width: 1100px;
+}
 #service-detail-picture
 {
 	width: 100%;
@@ -665,9 +675,33 @@ a.carousel-control.modal-slider-control
 	position: relative;
 	width: 1038px;
 	height: 708px;
-	    background-image: url(../photo/index/pic-index-news.jpg);
+	    background-image: url(../photo/index/pop-up.jpg);
   
     background-repeat: no-repeat, no-repeat;
+}
+.aboutUs-picture
+{
+	border-radius: 5px;
+	margin : 0 auto;
+	width: 1100px;
+	height: 600px;
+	   background-image: url(../photo/about-us/our-team.jpg);
+  
+    background-repeat: no-repeat, no-repeat;
+}
+.aboutUs-picture > img 
+{
+	float: left;
+}
+.team-detail , .aboutUs-detail-picture
+{
+	cursor: pointer;
+}
+.aboutUs-detail-picture
+{
+	width: 1100px;
+	height: 600px;
+	 background-repeat: no-repeat, no-repeat;
 }
 .map-download a
 {
@@ -699,6 +733,13 @@ a.boxclose{
     line-height: 0px;
     padding: 11px 3px;      
     text-decoration: none; 
+}
+a.boxclose.box-aboutUs
+{
+	float:none;
+	position: absolute;
+	top:-5px;
+	left:1080px;
 }
 a.boxclose.box-award
 {

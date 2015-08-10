@@ -1,10 +1,10 @@
 <?php 
     require_once('class/dbConnect.php');
 
-    $dbhost = '127.0.0.1';
+    $dbhost = 'localhost';
     $dbuser = 'root';
-    $dbpass = '';
-    $dbname = "eng-lesson2";
+    $dbpass = 'root';
+    $dbname = "innovation-technology";
 
     $dbClass = new DBConnect($dbhost,$dbuser,$dbpass,$dbname);
     $db      = $dbClass->connect;
