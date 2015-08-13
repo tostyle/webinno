@@ -8,6 +8,7 @@ session_start();
 // if(!isset($_SESSION['loginUser']))
 //     $_SESSION['loginUser']='';
     require_once '../libs/connect.php';
+    require_once '../libs/class/autoload.php';
     require_once '../libs/Slim/Slim/Slim.php';
 
 
@@ -27,6 +28,7 @@ session_start();
     $view->setTemplatesDirectory('./../templates/admin');
     //routes
     $app->get('/', 'home');
+    $app->get('/menu', 'getMenus');
    
 
     $app->run(); 
@@ -34,5 +36,12 @@ session_start();
     {
         $app = Slim::getInstance();
         $app->render('loginAdmin.html');
+    }
+    function getMenus()
+    {
+        $app = Slim::getInstance();
+        $menuClass =new \Model\Menu( $app->db );
+        $menus = $menuClass->getData();
+        echo json_encode( $menus );
     }
   

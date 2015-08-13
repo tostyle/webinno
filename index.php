@@ -5,13 +5,8 @@
  error_reporting(E_ALL);
 
   require_once('libs/connect.php');
-  require_once('libs/class/menu.php');
-  require_once('libs/class/home.php');
-  require_once('libs/class/homeLogo.php');
-  require_once('libs/controllers/menuController.php');
-  require_once('libs/controllers/homeController.php');
-  require_once('libs/controllers/homeLogoController.php');
-
+  require_once('libs/class/autoload.php');
+  require_once('libs/controllers/autoload.php');
   /* Models */
   $menu = new \Model\Menu($db);
   $home = new \Model\Home($db);
@@ -20,11 +15,11 @@
   $menuController = new \Controller\Menu();
   $homeController = new \Controller\Home();
   $homeLogoController = new \Controller\HomeLogo();
-  
+  /* Contents*/
   $contents['menu'] = $menuController->getContent( $menu );
   $contents['home'] = $homeController->getContent( $home );
   $contents['homeLogo'] = $homeLogoController->getContent( $homeLogo );
-
+  /* photos */
   $photos['homeLogo'] = $homeLogoController->getPhotoContent( $homeLogo );
 
 ?>
