@@ -8,3 +8,4 @@
 
     $dbClass = new DBConnect($dbhost,$dbuser,$dbpass,$dbname);
     $db      = $dbClass->connect;
+    $db->exec("SET NAMES 'utf8'");

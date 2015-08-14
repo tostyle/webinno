@@ -1,5 +1,23 @@
-<?php
+<?php 
+	$root = __DIR__.'/../';
+    require_once($root.'libs/connect.php');
+    require_once($root.'libs/class/autoload.php');
+    require_once($root.'libs/controllers/autoload.php');
+
+	 $stat    = new \Model\Stat($db);
+	 $aboutUs = new \Model\AboutUs($db);
+	 $service = new \Model\Service($db);
+
+     $statController    = new \Controller\Stat();
+     $aboutUsController = new \Controller\AboutUs();
+     $serviceController = new \Controller\Service();
+
+     $photos['stat']     = $statController->getPhotoContent( $stat );
+     $photos['aboutus']  = $aboutUsController->getPhotoContent( $aboutUs );
+     $photos['service']  = $serviceController->getPhotoContent( $service );
+/*echo '<pre>';print_r($photos['service']);*/
     header("Content-type: text/css; charset: UTF-8");
+    
 ?>
 @font-face {
     font-family: engFont;
@@ -156,6 +174,9 @@ vertical-align: middle;
 	margin-right: 150px;
 	width: 159px;
 }
+.home-icon:last-child{
+	margin-right: 0px;
+}
 .home-icon.last
 {
 	margin-right: 0px;
@@ -208,7 +229,7 @@ stat information
 */
 .statInfomation
 {
-	 background-image: url("../photo/statistics-information/pic-bg-statistics-information.jpg");
+	 background-image: url("../<?php echo $photos['stat']['background']?>");
 	 min-height: 570px;
 	  
 }
@@ -227,7 +248,7 @@ stat information
 {
 	width: 440px;
 	background-position:10px 22px;
-	 background-image: url("../photo/statistics-information/pic-thailand-map.png");
+	 background-image: url("../<?php echo $photos['stat']['map']?>");
 	 background-repeat: no-repeat;
 	  min-height: 570px;
 }
@@ -326,35 +347,35 @@ display: inline-block;
 }
 #service-pic-1
 {
-	 background-image: url("../photo/our-service/pic-service-01-on.png");
+	 background-image: url("../<?=$photos['service']['service-1-normal']?>");
 }
 #service-pic-1:hover
 {
-	 background-image: url("../photo/our-service/pic-service-01-over.png");
+	 background-image: url("../<?=$photos['service']['service-1-over']?>");
 }
 #service-pic-2
 {
-	 background-image: url("../photo/our-service/pic-service-02-on.png");
+	 background-image: url("../<?=$photos['service']['service-2-normal']?>");
 }
 #service-pic-2:hover
 {
-	 background-image: url("../photo/our-service/pic-service-02-over.png");
+	 background-image: url("../<?=$photos['service']['service-2-over']?>");
 }
 #service-pic-3
 {
-	 background-image: url("../photo/our-service/pic-service-03-on.png");
+	 background-image: url("../<?=$photos['service']['service-3-normal']?>");
 }
 #service-pic-3:hover
 {
-	 background-image: url("../photo/our-service/pic-service-03-over.png");
+	 background-image: url("../<?=$photos['service']['service-3-over']?>");
 }
 #service-pic-4
 {
-	 background-image: url("../photo/our-service/pic-service-04-on.png");
+	 background-image: url("../<?=$photos['service']['service-4-normal']?>");
 }
 #service-pic-4:hover
 {
-	 background-image: url("../photo/our-service/pic-service-04-over.png");
+	 background-image: url("../<?=$photos['service']['service-4-over']?>");
 }
 .service-picture
 {	
@@ -383,7 +404,7 @@ about us
 .aboutUs
 {
 	background-color: #194570;
-	 background-image: url("../photo/about-us/pic-about-us.jpg");
+	 background-image: url("../<?php echo $photos['aboutus']['background']?>");
 
 }
 .aboutUs > div

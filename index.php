@@ -8,19 +8,36 @@
   require_once('libs/class/autoload.php');
   require_once('libs/controllers/autoload.php');
   /* Models */
-  $menu = new \Model\Menu($db);
-  $home = new \Model\Home($db);
+  $menu     = new \Model\Menu($db);
+  $home     = new \Model\Home($db);
   $homeLogo = new \Model\HomeLogo($db);
+  $stat     = new \Model\Stat($db);
+  $aboutUs  = new \Model\AboutUs($db);
+  $service  = new \Model\Service($db);
+  $award    = new \Model\Award($db);
   /* Controllers */
-  $menuController = new \Controller\Menu();
-  $homeController = new \Controller\Home();
+  $menuController     = new \Controller\Menu();
+  $homeController     = new \Controller\Home();
   $homeLogoController = new \Controller\HomeLogo();
+  $statController     = new \Controller\Stat();
+  $aboutUsController  = new \Controller\AboutUs();
+  $serviceController  = new \Controller\Service();
+  $awardController    = new \Controller\Award();
+
+  $totalService = $service->getTotalSequence();
+
   /* Contents*/
-  $contents['menu'] = $menuController->getContent( $menu );
-  $contents['home'] = $homeController->getContent( $home );
+  $contents['menu']     = $menuController->getContent( $menu );
+  $contents['home']     = $homeController->getContent( $home );
   $contents['homeLogo'] = $homeLogoController->getContent( $homeLogo );
+  $contents['stat']     = $statController->getContent( $stat );
+  $contents['aboutUs']  = $aboutUsController->getContent( $aboutUs );
+  $contents['award']    = $awardController->getContent( $award );
+  
   /* photos */
   $photos['homeLogo'] = $homeLogoController->getPhotoContent( $homeLogo );
+  $photos['stat']     = $statController->getPhotoContent( $stat );
+  $photos['aboutUs']  = $aboutUsController->getPhotoContent( $aboutUs );
 
 ?>
 <head>

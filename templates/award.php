@@ -1,16 +1,20 @@
 <div>
-	<h2>49 Awards Guaranteed to Our Clients</h2>	
+	<h2><?=$contents['award']['text']['total-award']?> 
+		<?=$contents['award']['text']['award-head']?> 
+	</h2>	
 	<div class="award-list">
 		<div class="award-detail award-logo">
-			<img src="photo/award/icon-49-awards.png">
+			<img src="<?=$contents['award']['photo']['total-award-pic']?>">
 		</div>
 		<div class="award-detail award-text">
-			<p class="text-left text-bold">49 = Asean Energy Award +Thailand Energy Award + MEA Award </p>
+			<p class="text-left text-bold">
+				<?=$contents['award']['text']['total-award']?>
+				<?=$contents['award']['text']['award-detail']?> 
+			</p>
 			<div class="award-pic clear">
-				<img src="photo/award/pic-logo-award-01.png">
-				<img src="photo/award/pic-logo-award-02.png">
-				<img src="photo/award/pic-logo-award-03.png">
-				<img src="photo/award/pic-logo-award-04.png">
+				<?php foreach ($contents['award']['logo'] as $key => $logo):?>
+				<img src="<?=$logo['detail']?>">
+			<?php endforeach;?>
 			</div>		
 		</div>
 		<div class="clear"></div>
@@ -20,6 +24,6 @@
 	</div>
 	<div>
 		<h2>OUR CLIENTS</h2>
-		<img src="photo/award/pic-all-our-clients.jpg">
+		<img src="<?=$contents['award']['photo']['all-client']?>">
 	</div>
 </div>
