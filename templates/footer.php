@@ -2,25 +2,23 @@
 <div class="footer-detail">
 	<h3>INNOVATION TECHNOLOGY</h3>
 	<div>
-		<p>Home</p>
-			<p>Service</p>
-<p>About Us</p>
-			
+		<p><?php echo $contents['menu'][0]['detail'] ?></p>
+		<p><?php echo $contents['menu'][1]['detail'] ?></p>
+		<p><?php echo $contents['menu'][2]['detail'] ?></p>
 	</div>
 	<div>
-	<p>Awards</p>
-		<p>Careers</p>
-			
-			<p>Contact Us</p>
+		<p><?php echo $contents['menu'][3]['detail'] ?></p>
+		<p><?php echo $contents['menu'][4]['detail'] ?></p>
+		<p><?php echo $contents['menu'][5]['detail'] ?></p>
 	</div>
 	
 </div>
 <div class="footer-detail">
 	<h3>Contact</h3>
-	<p>51 /29-30 Nham Wong Wan Road</p>
-	<p>Ladyao,Chatuchak,Bangkok 10900</p>
-	<p><span>Tel : </span> 66(0)29414080-1 , 66(0)29410751-2</p>
-	<p><span>Fax : </span> 66(0)29414082 , 66(0)29410753</p>
-	<p><span>Email : </span> contact@inno.co.th</p>
-	<p class="map-download"><a href="photo/map/map.jpg">ดาวโหลดแผนที่</a></p>
+	<p><?=$contents['footer']['address1']?></p>
+	<p><?=$contents['footer']['address2']?></p>
+	<p><span>Tel : </span> <?=$contents['footer']['tel']?></p>
+	<p><span>Fax : </span> <?=$contents['footer']['fax']?></p>
+	<p><span>Email : </span> <?=$contents['footer']['email']?></p>
+	<p class="map-download"><a target="_blank" href="<?=$contents['footer']['map']?>">ดาวโหลดแผนที่</a></p>
 </div>

@@ -15,6 +15,8 @@
   $aboutUs  = new \Model\AboutUs($db);
   $service  = new \Model\Service($db);
   $award    = new \Model\Award($db);
+  $career   = new \Model\Career($db);
+  $footer   = new \Model\Footer($db);
   /* Controllers */
   $menuController     = new \Controller\Menu();
   $homeController     = new \Controller\Home();
@@ -23,6 +25,8 @@
   $aboutUsController  = new \Controller\AboutUs();
   $serviceController  = new \Controller\Service();
   $awardController    = new \Controller\Award();
+  $careerController   = new \Controller\Career();
+  $footerController   = new \Controller\Footer();
 
   $totalService = $service->getTotalSequence();
 
@@ -33,7 +37,9 @@
   $contents['stat']     = $statController->getContent( $stat );
   $contents['aboutUs']  = $aboutUsController->getContent( $aboutUs );
   $contents['award']    = $awardController->getContent( $award );
-  
+  $contents['career']   = $careerController->getContent( $career );
+  $contents['footer']   = $footerController->getContent( $footer );
+
   /* photos */
   $photos['homeLogo'] = $homeLogoController->getPhotoContent( $homeLogo );
   $photos['stat']     = $statController->getPhotoContent( $stat );
@@ -208,7 +214,6 @@
             });
             $( ".career-link" ).click(function(event) {
                 var linkPosition = $('#'+this.id).text();
-                console.log(linkPosition);
                $('.career-position').text(linkPosition);
            });
             setHomeLogo('money');
