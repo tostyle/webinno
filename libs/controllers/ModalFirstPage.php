@@ -1,14 +1,14 @@
 <?php 
 	namespace Controller;
-	class ModalFirstPage
+	class ModalFirstPage extends \Controller\Controller
 	{
 		public function __construct()
 		{
 
 		}
-		public function getContent( $model )
-		{
-			$contents =$model->getData();
-			return $contents;
-		}
+		// public function getContent( $model )
+		// {
+		// 	$contents =$model->getData();
+		// 	return $contents;
+		// }
 	}

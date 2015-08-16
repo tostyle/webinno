@@ -7,14 +7,7 @@ namespace Model;
 	{
 		public function __construct( $connect )
 		{
+			$this->section='menu';
 			parent::__construct( $connect );
-		}
-		public function getData()
-		{
-			$this->sql="SELECT * FROM {$this->table} WHERE section='menu' {$this->order}";
-			$query = $this->connect->prepare( $this->sql );
-			$query->execute();
-			$result = $query->fetchAll(PDO::FETCH_ASSOC);
-			return $result;
 		}
 	}

@@ -1,19 +1,12 @@
 <?php 
 	namespace Controller;
-	class Stat
+	class Stat extends \Controller\Controller
 	{
 		public function __construct()
 		{
 
 		}
-		public function setContent($datas)
-		{
-			foreach ($datas as $key => $content) {
-				$index = $content['name'];
-				$contents[ $index ] = $content['detail'];
-			}
-			return $contents;
-		}
+		
 		public function getContent( $model )
 		{
 			$datas =$model->getData();

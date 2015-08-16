@@ -1,6 +1,6 @@
 <?php 
 	namespace Controller;
-	class Service
+	class Service extends \Controller\Controller
 	{
 		public function __construct()
 		{
@@ -8,11 +8,7 @@
 		}
 		public function setContent($datas)
 		{
-			foreach ($datas as $key => $content) {
-				$index = $content['section_id'];
-				$contents[ $index ] = $content['detail'];
-			}
-			return $contents;
+			return parent::setContentByID($datas);
 		}
 		public function getContent( $model )
 		{

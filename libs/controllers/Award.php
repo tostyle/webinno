@@ -1,6 +1,6 @@
 <?php 
 	namespace Controller;
-	class Award
+	class Award extends \Controller\Controller
 	{
 		public function __construct()
 		{
@@ -8,10 +8,11 @@
 		}
 		public function setContent($datas)
 		{
-			foreach ($datas as $key => $content) {
-				$index = $content['section_id'];
-				$contents[ $index ] = $content['detail'];
-			}
+			// foreach ($datas as $key => $content) {
+			// 	$index = $content['section_id'];
+			// 	$contents[ $index ] = $content['detail'];
+			// }
+			$contents = parent::setContentByID($datas);
 			return $contents;
 		}
 		public function getContent( $model )

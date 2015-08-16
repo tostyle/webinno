@@ -12,29 +12,16 @@ namespace Model;
 		}
 		public function getTotalAward()
 		{
-			$this->sql="SELECT * FROM {$this->table} 
-						WHERE section='{$this->section}' 
-						AND name='total-awards' {$this->order}";
+			$this->sql = $this->setDataSQL( " AND name='total-awards' " );
 			$query = $this->connect->prepare( $this->sql );
 			$query->execute();
 			$result = $query->fetch(PDO::FETCH_ASSOC);
 			return $result;
 		}
-		public function getDataByName( $name )
-		{
-			$this->sql="SELECT * FROM {$this->table} 
-						WHERE section='{$this->section}' 
-						AND name='{$name}' {$this->order}";
-			$query = $this->connect->prepare( $this->sql );
-			$query->execute();
-			$result = $query->fetchAll(PDO::FETCH_ASSOC);
-			return $result;
-		}
 		public function getData()
 		{
-			$this->sql="SELECT * FROM {$this->table} 
-						WHERE section='award' 
-						AND type='text' {$this->order}";
+			$filter = " AND type='text'";
+			$this->setDataSQL($filter);
 			$query = $this->connect->prepare( $this->sql );
 			$query->execute();
 			$result = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -42,9 +29,8 @@ namespace Model;
 		}
 		public function getPhoto()
 		{
-			$this->sql="SELECT * FROM {$this->table} 
-						WHERE section='{$this->section}' 
-						AND name<>'logo-award' AND type='photo' {$this->order}";
+			$filter = " AND name<>'logo-award' AND type='photo'";
+			$this->setDataSQL($filter);
 			$query = $this->connect->prepare( $this->sql );
 			$query->execute();
 			$result = $query->fetchAll(PDO::FETCH_ASSOC);

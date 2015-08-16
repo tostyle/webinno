@@ -17,8 +17,8 @@
 		}
 		public function getContent( $model )
 		{
-			$contents =$model->getData();
-			$contents = $this->setContent( $contents );
+			$datas =$model->getData();
+			$contents = $this->setContent( $datas );
 			return $contents;
 		}
 	}

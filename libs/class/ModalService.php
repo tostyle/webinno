@@ -21,7 +21,7 @@ namespace Model;
 			$result = $query->fetch(PDO::FETCH_ASSOC);
 			return $result['total'];
 		}
-		public function getData($name)
+		public function getData()
 		{
 			$this->sql="SELECT * FROM {$this->table} 
 						WHERE section='{$this->section}'

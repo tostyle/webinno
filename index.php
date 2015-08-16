@@ -184,7 +184,7 @@
       var modalAboutUs = <?=json_encode( $contents['modalAboutUs']['detailContent'])?> ; 
 
         $(document).ready(function(){
-          $('#firstPageModal').modal('show');
+          // $('#firstPageModal').modal('show');
           $('#submitCareerForm').click(function(event) {
             var formData = $('#registerForm').serialize();
             $.ajax({

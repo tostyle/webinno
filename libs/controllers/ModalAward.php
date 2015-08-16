@@ -1,14 +1,9 @@
 <?php 
 	namespace Controller;
-	class ModalAward
+	class ModalAward extends \Controller\Controller
 	{
 		public function __construct()
 		{
 
-		}
-		public function getContent( $model )
-		{
-			$contents =$model->getData();
-			return $contents;
 		}
 	}
