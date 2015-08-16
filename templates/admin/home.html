@@ -1,2 +1,19 @@
-<input type="text" ng-model="password"> 
- <md-button ng-click="login()" > Submit </md-button>
+
+    <md-content md-theme="altTheme" class="altTheme">
+
+<div layout="column" layout-fill layout-align="center center">
+	<div layout="row" layout-align="center">
+		<div ><h1>Login</h1>	</div>
+	</div>
+	<div layout="row" layout-align="center">
+	<div >
+		<md-input-container>
+	      <label>Enter Password</label>
+	      <input id="password" ng-model="password" class="md-primary">
+	    </md-input-container>
+	</div>
+	<div> <md-button class="md-raised md-primary" ng-click="login()" > Submit </md-button></div>
+	</div>
+</div>
+
+    </md-content>

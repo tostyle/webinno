@@ -1,10 +1,19 @@
 var adminApp = angular.module('adminApp', ['ngMaterial','ngRoute'])
 	.config(function($mdThemingProvider , $routeProvider ) {
-
+		$mdThemingProvider.theme('altTheme')
+			.backgroundPalette('blue' ,{
+     			'default' : '700',
+     			'hue-1': '300'
+     		});
   		$mdThemingProvider.theme('default')
-    		.primaryPalette('pink')
+    		.primaryPalette('blue',{
+    			'default' :'900',
+    			'hue-1': '300'
+    		})
     		.accentPalette('orange')
-     		.backgroundPalette('blue-grey');
+     		.backgroundPalette('indigo' ,{
+     			'default' : '50'
+     		});
      	$routeProvider
      		.when('/', {
 	     		templateUrl: '../templates/admin/home.html',
