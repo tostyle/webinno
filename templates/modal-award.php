@@ -14,8 +14,19 @@
 
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
-
-            <div class="item active">
+              <?php foreach ($contents['modalAward'] as $key => $award) :
+                  $active='';
+                  if($key==0)
+                    $active='active';
+              ?>
+              <div class="item <?=$active?>">
+                <img src="<?=$award['detail']?>" alt="...">
+              <div class="carousel-caption">
+                ...
+              </div>
+            </div>
+          <?php endforeach; ?>
+         <!--    <div class="item active">
               <img src="photo/award/pic-award01.jpg" alt="...">
               <div class="carousel-caption">
                 ...
@@ -32,7 +43,7 @@
               <div class="carousel-caption">
                 ...
               </div>
-            </div>
+            </div> -->
           </div>
 
           <!-- Controls -->

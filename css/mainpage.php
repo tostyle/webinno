@@ -7,14 +7,17 @@
 	 $stat    = new \Model\Stat($db);
 	 $aboutUs = new \Model\AboutUs($db);
 	 $service = new \Model\Service($db);
+	 $firstpage   = new \Model\ModalFirstPage($db);
 
      $statController    = new \Controller\Stat();
      $aboutUsController = new \Controller\AboutUs();
      $serviceController = new \Controller\Service();
+     $firstpageController   = new \Controller\ModalFirstPage();
 
      $photos['stat']     = $statController->getPhotoContent( $stat );
      $photos['aboutus']  = $aboutUsController->getPhotoContent( $aboutUs );
      $photos['service']  = $serviceController->getPhotoContent( $service );
+     $photos['firstpage']   = $firstpageController->getContent( $firstpage );
 /*echo '<pre>';print_r($photos['service']);*/
     header("Content-type: text/css; charset: UTF-8");
     
@@ -696,7 +699,7 @@ a.carousel-control.modal-slider-control
 	position: relative;
 	width: 1038px;
 	height: 708px;
-	    background-image: url(../photo/index/pop-up.jpg);
+	    background-image: url(../<?=$photos['firstpage']['detail']?>);
   
     background-repeat: no-repeat, no-repeat;
 }

@@ -17,6 +17,10 @@
   $award    = new \Model\Award($db);
   $career   = new \Model\Career($db);
   $footer   = new \Model\Footer($db);
+  $modalAward   = new \Model\ModalAward($db);
+  $modalAboutUs   = new \Model\ModalAboutUs($db);
+  $modalService   = new \Model\ModalService($db);
+  
   /* Controllers */
   $menuController     = new \Controller\Menu();
   $homeController     = new \Controller\Home();
@@ -27,6 +31,10 @@
   $awardController    = new \Controller\Award();
   $careerController   = new \Controller\Career();
   $footerController   = new \Controller\Footer();
+  $modalAwardController   = new \Controller\ModalAward();
+  $modalAboutUsController   = new \Controller\ModalAboutUs();
+  $modalServiceController   = new \Controller\ModalService();
+  
 
   $totalService = $service->getTotalSequence();
 
@@ -39,6 +47,10 @@
   $contents['award']    = $awardController->getContent( $award );
   $contents['career']   = $careerController->getContent( $career );
   $contents['footer']   = $footerController->getContent( $footer );
+  $contents['modalAward']   = $modalAwardController->getContent( $modalAward );
+  $contents['modalAboutUs']   = $modalAboutUsController->getContent( $modalAboutUs );
+  $contents['modalService']   = $modalServiceController->getContent( $modalService );
+  
 
   /* photos */
   $photos['homeLogo'] = $homeLogoController->getPhotoContent( $homeLogo );
@@ -138,10 +150,10 @@
            <?php include('templates/service.php');?>
         </section>
         
-        <section class="award" id="award-page">
+        <section class="award" id="awards-page">
            <?php include('templates/award.php');?>
         </section>
-        <section class="career clear" id="career-page">
+        <section class="career clear" id="careers-page">
            <?php include('templates/career.php');?>
         </section>
         <section class="contactUs " id="contactus-page">
@@ -155,11 +167,9 @@
     <?php include('templates/modal-aboutUs.php'); ?>
     <?php include('templates/modal-career.php'); ?>
     <?php include('templates/modal-service.php'); ?>
+    <?php include('templates/modal-service-all.php'); ?>
     <?php include('templates/modal-firstPage.php'); ?>
-    <?php include('templates/modal-service-1.php'); ?>
-    <?php include('templates/modal-service-2.php'); ?>
-    <?php include('templates/modal-service-3.php'); ?>
-    <?php include('templates/modal-service-4.php'); ?>
+  
 
     
     <!-- jQuery -->
@@ -171,8 +181,10 @@
     <script src="js/scrolling-nav.js"></script>
     <script type="text/javascript">
       var homeLogoPics = <?=json_encode( $photos['homeLogo'])?> ; 
+      var modalAboutUs = <?=json_encode( $contents['modalAboutUs']['detailContent'])?> ; 
+
         $(document).ready(function(){
-          // $('#firstPageModal').modal('show');
+          $('#firstPageModal').modal('show');
           $('#submitCareerForm').click(function(event) {
             var formData = $('#registerForm').serialize();
             $.ajax({
@@ -203,8 +215,7 @@
              
            });
            $('.team-detail').click(function(event) {
-              // $("#aboutUsDetailModal").modal("show");
-              $('.aboutUs-detail-picture').css('background-image', 'url(' + "photo/our-team/"+this.id+"-detail.jpg" + ')');
+              $('.aboutUs-detail-picture').css('background-image', 'url(' + modalAboutUs[this.id] + ')');
            });
            $('.aboutUs-detail-picture').click(function(event) {
               $("#aboutUsDetailModal").modal("hide");
