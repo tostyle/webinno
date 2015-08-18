@@ -29,6 +29,36 @@
 		{
 			$this->enabled =" AND enabled='Y' ";
 		}
+		/**
+		 * "id": "7",
+		 * @param [type] $datas [description]
+		 */
+		// "section": "home",
+	    // "section_id": "home1",
+	    // "name": "home1",
+	    // "detail": "photo/slide-pic/pic-banner-01-en.jpg",
+	    // "type": "photo",
+	    // "language": "en",
+	    // "sequence": "1",
+	    // "enabled": "Y",
+	    // "updated_date": null
+		public function setDataByType( $datas )
+		{
+			$contents= array();
+			foreach ($datas as $key => $value) {
+				$index = $value['id'];
+				$type  = $value['type'];
+
+				$contents[ $type ][ $index ]['id']       = $value['id'];
+				$contents[ $type ][ $index ]['section']  = $value['section'];
+				$contents[ $type ][ $index ]['name']     = $value['name'];
+				$contents[ $type ][ $index ]['detail']   = $value['detail'];
+				$contents[ $type ][ $index ]['language'] = $value['language'];
+				$contents[ $type ][ $index ]['sequence'] = $value['sequence'];
+				$contents[ $type ][ $index ]['enabled']  = $value['enabled'];
+			}
+			return $contents;
+		}
 		public function setDataSQL($filter='')
 		{
 			$this->sql="SELECT * FROM {$this->table} 

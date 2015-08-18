@@ -1,7 +1,11 @@
-adminApp.controller('DashboardCtrl', ['$scope','$rootScope','Menu', function ($scope,$rootScope, Menu) {
-	// $scope.menus =$rootScope.menus;
-	// var promise = Menu.getMenuList();
-	// promise.then(function(menus) {
- //    	$scope.menus  = menus;
-	// });
+adminApp.controller('DashboardCtrl', ['$scope','$rootScope','$routeParams','Menu','Section', function ($scope,$rootScope,$routeParams, Menu,Section) {
+	
+	Section.getContentInSection($routeParams.section).success(function(contents){
+		$scope.contents = contents;
+	});
+	$scope.getContentDetail = function(type){
+		var id = $scope.photoID;
+		$scope.editContentType = type;
+		$scope.editContent = $scope.contents[type][id];
+	}
 }])

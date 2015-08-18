@@ -29,6 +29,7 @@ session_start();
     //routes
     $app->get('/', 'home');
     $app->get('/menu', 'getMenus');
+    $app->get('/content/:sectionName', 'getContent');
    
 
     $app->run(); 
@@ -43,5 +44,21 @@ session_start();
         $menuClass =new \Model\Menu( $app->db );
         $menus = $menuClass->getData();
         echo json_encode( $menus );
+    }
+    function getContent( $sectionName )
+    {
+        $app = Slim::getInstance();
+        switch ($sectionName) {
+            case 'home':
+                    $sectionClass = new \Model\Home($app->db);
+                break;
+            
+            default:
+                # code...
+                break;
+        }
+        $datas = $sectionClass->getData();
+        $datas = $sectionClass->setDataByType( $datas );
+        echo json_encode($datas);
     }
   
