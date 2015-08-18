@@ -35,7 +35,7 @@ session_start();
     function home($username='')
     {
         $app = Slim::getInstance();
-        $app->render('loginAdmin.html');
+        $app->render('admin.html');
     }
     function getMenus()
     {

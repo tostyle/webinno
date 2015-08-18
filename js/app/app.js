@@ -7,7 +7,7 @@ var adminApp = angular.module('adminApp', ['ngMaterial','ngRoute'])
      		});
   		$mdThemingProvider.theme('default')
     		.primaryPalette('blue',{
-    			'default' :'900',
+    			'default' :'800',
     			'hue-1': '300'
     		})
     		.accentPalette('orange')
