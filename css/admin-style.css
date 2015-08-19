@@ -10,3 +10,12 @@ md-whiteframe.login-whiteframe
 {
 	background-color: #009688;
 }
+.uploadButton {
+    -moz-appearance: button;
+    /* Firefox */
+    -webkit-appearance: button;
+    /* Safari and Chrome */
+    padding: 10px;
+    margin: 10px;
+    width: 100px;
+}

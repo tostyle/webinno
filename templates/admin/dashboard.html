@@ -16,7 +16,10 @@
     		</div>
   		</div>
 		<div  flex>
-		   {{editContent}}
+			<div ng-show="editContentType=='photo'">
+				<div class="uploadButton" ngf-select ng-model="file" ngf-multiple="false">Select File</div>
+			</div>
+		   {{log}}
 
 		</div>
 	</div>
