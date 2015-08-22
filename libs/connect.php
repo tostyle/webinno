@@ -3,7 +3,7 @@
 
     $dbhost = 'localhost';
     $dbuser = 'root';
-    $dbpass = 'root';
+    $dbpass = '';
     $dbname = "innovation-technology";
 
     $dbClass = new DBConnect($dbhost,$dbuser,$dbpass,$dbname);

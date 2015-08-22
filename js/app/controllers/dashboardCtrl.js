@@ -4,27 +4,38 @@ adminApp.controller('DashboardCtrl', ['$scope','$rootScope','$routeParams','Menu
 		$scope.contents = contents;
 	});
 	$scope.getContentDetail = function(type){
+
 		var id = $scope.photoID;
+        if(type=='text')
+            id = $scope.contentID;
 		$scope.editContentType = type;
 		$scope.editContent = $scope.contents[type][id];
 	}
 	$scope.$watch('file', function (file) {
+        if(file){
         $scope.upload([$scope.file]);
         console.log(file);
+        }
     });
+    $scope.saveContent =function(){
+         console.log($scope.editContent);
+        Section.saveContent( $scope.editContent ).success(function(result){
+            console.log(result);
+        });
+    }
     $scope.upload = function (files) {
         if (files && files.length) {
             for (var i = 0; i < files.length; i++) {
                 var file = files[i];
                 Upload.upload({
-                    url: '../photo/service',
+                    url: 'uploadPic',
                     fields: {
-                        'username': 'msadsad'
+                        'contentDetail': $scope.editContent
                     },
                     file: file
                 }).progress(function (evt) { 
-                	 var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-            		console.log('progress: ' + progressPercentage + '% ' + evt.config.file.name);
+              //   	 var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+            		// console.log('progress: ' + progressPercentage + '% ' + evt.config.file.name);
                 }).success(function (data, status, headers, config) {
                 	 console.log('file ' + config.file.name + 'uploaded. Response: ' + data);
                 }).error(function (data, status, headers, config) {

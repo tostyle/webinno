@@ -1,6 +1,9 @@
 <div class="inno">
 	<h2 class="text-center"><?php echo $contents['stat']['head1'] ?></h2>	
 	<div class="stat-pic">
+		 <div id="canvas-holder" style="width:13%">
+          <canvas id="chart-area" width="105" height="110"/>
+        </div>
 		<div>
 			<img src="photo/statistics-information/pic-2014-power.png">
 			<img src="photo/statistics-information/pic-2015.png">

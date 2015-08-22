@@ -11,16 +11,22 @@
 				    <hr />
 				</div>
 				<div flex>
-				    Photo
+				    <h2><span class="md-primary">Text Content</span></h2>
+				     <md-radio-group ng-model="contentID" ng-change="getContentDetail('text')">{{ contentID }}
+				      	<md-radio-button ng-repeat="content in contents.text" value="{{content.id}}" >{{content.name}}</md-radio-button>
+				    </md-radio-group>
 				</div>
     		</div>
   		</div>
 		<div  flex>
-			<div ng-show="editContentType=='photo'">
+			<div ng-if="editContentType=='photo'">
 				<div class="uploadButton" ngf-select ng-model="file" ngf-multiple="false">Select File</div>
 			</div>
-		   {{log}}
-
+			<div ng-if="editContentType=='text'">
+			
+				<textarea name="" id="" cols="30" rows="5" ng-model="editContent.detail">{{ editContent.detail }}</textarea>
+				<md-button class="md-raised md-primary" ng-click="saveContent();"> Save Content </md-button>
+			</div>
 		</div>
 	</div>
 </md-content>

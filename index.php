@@ -162,6 +162,7 @@
         <footer class="inno-footer">
             <?php include('templates/footer.php'); ?>
         </footer>
+       
     </div>
     <?php include('templates/modal-award.php'); ?>
     <?php include('templates/modal-aboutUs.php'); ?>
@@ -179,10 +180,38 @@
     <script src="js/jquery.bxslider.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
+    <script src="js/Chart.js"></script>
     <script type="text/javascript">
       var homeLogoPics = <?=json_encode( $photos['homeLogo'])?> ; 
       var modalAboutUs = <?=json_encode( $contents['modalAboutUs']['detailContent'])?> ; 
+      
+      var doughnutData = [
+        {
+          value: 400,
+          color:"#F7464A",
+          highlight: "#FF5A5E",
+          label: "Red"
+        },
+        {
+          value: 300,
+          color: "#ffffff",
+          highlight: "#ffffff",
+          label: "Green"
+        }
 
+      ];
+
+      window.onload = function(){
+        var ctx = document.getElementById("chart-area").getContext("2d");
+        window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {
+          segmentShowStroke : true,
+          responsive : true
+
+
+        });
+        ctx.fillText("Hello World!",10,50);
+      };
+      /////////
         $(document).ready(function(){
           // $('#firstPageModal').modal('show');
           $('#submitCareerForm').click(function(event) {

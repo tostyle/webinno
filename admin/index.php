@@ -29,7 +29,9 @@ session_start();
     //routes
     $app->get('/', 'home');
     $app->get('/menu', 'getMenus');
+    $app->post('/uploadPic', 'uploadPic');
     $app->get('/content/:sectionName', 'getContent');
+    $app->post('/content', 'updateContent');
    
 
     $app->run(); 
@@ -52,7 +54,9 @@ session_start();
             case 'home':
                     $sectionClass = new \Model\Home($app->db);
                 break;
-            
+            case 'aboutus':
+                    $sectionClass = new \Model\AboutUs($app->db);
+                break;
             default:
                 # code...
                 break;
@@ -60,5 +64,33 @@ session_start();
         $datas = $sectionClass->getData();
         $datas = $sectionClass->setDataByType( $datas );
         echo json_encode($datas);
+    }
+    function uploadPic()
+    {
+        $app = Slim::getInstance();
+        $content = json_decode($_POST['contentDetail']);
+        $targetDir = dirname($content->detail);
+        $targetFile = $targetDir."/".$_FILES["file"]["name"];
+        if(move_uploaded_file($_FILES["file"]["tmp_name"],'../'.$targetFile))
+        {
+           $sql="UPDATE content SET detail='{$targetFile}' WHERE id='{$content->id}'";
+           $query = $app->db->prepare($sql);
+           $query->execute();
+           $result['success']=true;
+        }
+        else
+        {
+            $result['error']=true;
+        }
+        return $json_encode($result);
+    }
+    function updateContent(){
+        $app = Slim::getInstance();
+        $put =$app->request->post();
+
+         $postdata = file_get_contents("php://input");
+        $request = json_decode($postdata);
+        // $put = json_decode($put);
+        var_dump($request);
     }
   
