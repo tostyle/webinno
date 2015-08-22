@@ -89,8 +89,11 @@ session_start();
         $put =$app->request->post();
 
          $postdata = file_get_contents("php://input");
-        $request = json_decode($postdata);
-        // $put = json_decode($put);
-        var_dump($request);
+        $content = json_decode($postdata);
+       
+       $sql="UPDATE content SET detail='{$content->detail}' WHERE id='{$content->id}'";
+           $query = $app->db->prepare($sql);
+           $query->execute();
+        // var_dump($content);
     }
   
