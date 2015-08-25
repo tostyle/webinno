@@ -19,7 +19,23 @@
     </md-sidenav>
 	<md-content flex layout-fill>
 		<div layout="row" layout-fill > 
-	  		
+	  		<div class="content-text" flex>
+    		<div layout="column">
+    			<div flex>
+				   <h2><span class="md-primary">Photo Content</span></h2>
+				     <md-radio-group ng-model="photoID" ng-change="getContentDetail('photo')">{{ photoID }}
+				      	<md-radio-button ng-repeat="photo in contents.photo" value="{{photo.id}}" >{{photo.name}}</md-radio-button>
+				    </md-radio-group>
+				    <hr />
+				</div>
+				<div flex>
+				    <h2><span class="md-primary">Text Content</span></h2>
+				     <md-radio-group ng-model="contentID" ng-change="getContentDetail('text')">{{ contentID }}
+				      	<md-radio-button ng-repeat="content in contents.text" value="{{content.id}}" >{{content.name}}</md-radio-button>
+				    </md-radio-group>
+				</div>
+    		</div>
+  		</div>
 			<div  flex>
 				<div ng-if="editContentType=='photo'">
 					<div class="uploadButton" ngf-select ng-model="file" ngf-multiple="false">Select File</div>
