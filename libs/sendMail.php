@@ -1,6 +1,6 @@
 <?php  
 	require_once('PHPMailer/PHPMailerAutoload.php');
-
+    include('connect.php');
 	$mail = new PHPMailer(); // create a new object
     $mail->IsSMTP(); // enable SMTP
     $mail->SMTPDebug = 2; // debugging: 1 = errors and messages, 2 = messages only
@@ -25,6 +25,16 @@
          if( !$mail->Send() )
          {
          	echo 'mail senrdd';
+            $sql="INSERT INTO career (name,position,address,mobile,email,portfolio) VALUES 
+                (:name,:position,:address,:mobile,:email,:portfolio)";
+            $query = $db->prepare($sql);
+             $query->bindParam(':name'    , $_POST['registerName']);
+             $query->bindParam(':position'    , $_POST['position']);
+             $query->bindParam(':address'    , $_POST['address']);
+             $query->bindParam(':mobile'    , $_POST['mobile']);
+             $query->bindParam(':email'    , $_POST['email']);
+             $query->bindParam(':portfolio'    , $_POST['portfolio']);
+             $query->execute();
          }
          else
          {

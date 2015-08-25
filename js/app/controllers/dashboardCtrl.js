@@ -3,6 +3,10 @@ adminApp.controller('DashboardCtrl', ['$scope','$rootScope','$routeParams','Menu
 	Section.getContentInSection($routeParams.section).success(function(contents){
 		$scope.contents = contents;
 	});
+    Menu.getAllSection().success(function(sections){
+        $scope.sections = sections;
+        // console.log(sections);
+    });
 	$scope.getContentDetail = function(type){
 
 		var id = $scope.photoID;

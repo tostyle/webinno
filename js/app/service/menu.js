@@ -8,5 +8,8 @@ adminApp.factory('Menu', [ '$q','$http',function ( $q, $http ) {
 		});
 		return deferred.promise;
 	}
+	menu.getAllSection = function(){
+		return $http.get('section');
+	}
 	return menu;
 }])

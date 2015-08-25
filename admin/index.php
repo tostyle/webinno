@@ -29,6 +29,7 @@ session_start();
     //routes
     $app->get('/', 'home');
     $app->get('/menu', 'getMenus');
+    $app->get('/section', 'getAllSection');
     $app->post('/uploadPic', 'uploadPic');
     $app->get('/content/:sectionName', 'getContent');
     $app->post('/content', 'updateContent');
@@ -46,7 +47,28 @@ session_start();
         $menuClass =new \Model\Menu( $app->db );
         $menus = $menuClass->getData();
         echo json_encode( $menus );
+    }   
+    function getAllSection(){
+        $app = Slim::getInstance();
+        $menuClass =new \Model\Menu( $app->db );
+        $menus = $menuClass->getAllSection();
+        echo json_encode( $menus );
     }
+    /** aboutUs
+        award
+        career
+        firstpage
+        footer
+        home
+        homeLogo
+        menu
+        modal-aboutUs
+        modal-award
+        modal-service
+        service
+        stat
+
+     */
     function getContent( $sectionName )
     {
         $app = Slim::getInstance();
@@ -54,8 +76,38 @@ session_start();
             case 'home':
                     $sectionClass = new \Model\Home($app->db);
                 break;
+            case 'homeLogo':
+                    $sectionClass = new \Model\HomeLogo($app->db);
+                break;
             case 'aboutus':
                     $sectionClass = new \Model\AboutUs($app->db);
+                break;
+            case 'award':
+                    $sectionClass = new \Model\Award($app->db);
+                break;
+            case 'career':
+                    $sectionClass = new \Model\Career($app->db);
+                break;
+            case 'firstpage':
+                    $sectionClass = new \Model\ModalFirstPage($app->db);
+                break;
+            case 'footer':
+                    $sectionClass = new \Model\Footer($app->db);
+                break; 
+            case 'service':
+                    $sectionClass = new \Model\Service($app->db);
+                break;
+             case 'stat':
+                    $sectionClass = new \Model\Stat($app->db);
+                break;
+            case 'modal-aboutUs':
+                    $sectionClass = new \Model\ModalAward($app->db);
+                break;
+            case 'modal-award':
+                    $sectionClass = new \Model\ModalAboutUs($app->db);
+                break;
+            case 'modal-service':
+                    $sectionClass = new \Model\ModalService($app->db);
                 break;
             default:
                 # code...
