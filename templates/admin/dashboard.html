@@ -1,41 +1,45 @@
 <admin-menu></admin-menu>
 <section layout="row" flex>
 	<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
-      <md-toolbar class="md-theme-indigo">
-        <h1 class="md-toolbar-tools">Select Section</h1>
-      </md-toolbar>
-      <md-content flex >
-        <div layout="row" >
-        	<div flex>
-		        <md-select ng-model="selectedSection">
-		          <md-option ng-repeat="section in sections" value="{{section.section}}">{{section.section}}</md-option>
+        <md-toolbar class="md-theme-indigo">
+        	<h1 class="md-toolbar-tools">Select Section</h1>
+        </md-toolbar>
+        <md-content class="md-padding">
+            <form name="contactForm" data-ng-submit="sendMail()">
+                <md-select ng-model="selectedSection" placeholder="Select Page Section">
+		          	<md-option ng-repeat="section in sections" value="{{section.section}}">{{section.section}}</md-option>
 		        </md-select>
-	    	</div>
-			<div flex>
-	      		<md-button href="#dashboard/{{ selectedSection }}">Go</md-button>	
-	        </div>
-	    </div>
-      </md-content>
-    </md-sidenav>
-	<md-content flex layout-fill>
-		<div layout="row" layout-fill > 
-	  		<div class="content-text" flex>
+                <md-button  class="md-raised md-primary" href="#dashboard/{{ selectedSection }}">Go</md-button>	
+            </form>
+        </md-content>
+        <md-content>
+        	
+           <!--  <div class="content-text" flex> -->
     		<div layout="column">
     			<div flex>
-				   <h2><span class="md-primary">Photo Content</span></h2>
-				     <md-radio-group ng-model="photoID" ng-change="getContentDetail('photo')">{{ photoID }}
+				   	<md-toolbar class="md-theme-indigo">
+	        			<h2 class="md-toolbar-tools">Photo Content</h2>
+	        		</md-toolbar>
+				     <md-radio-group ng-model="photoID" ng-change="getContentDetail('photo')">
 				      	<md-radio-button ng-repeat="photo in contents.photo" value="{{photo.id}}" >{{photo.name}}</md-radio-button>
 				    </md-radio-group>
-				    <hr />
+				   
 				</div>
 				<div flex>
-				    <h2><span class="md-primary">Text Content</span></h2>
-				     <md-radio-group ng-model="contentID" ng-change="getContentDetail('text')">{{ contentID }}
+				    <md-toolbar class="md-theme-indigo">
+	        			<h2 class="md-toolbar-tools">Text Content</h2>
+	        		</md-toolbar>
+				     <md-radio-group ng-model="contentID" ng-change="getContentDetail('text')">
 				      	<md-radio-button ng-repeat="content in contents.text" value="{{content.id}}" >{{content.name}}</md-radio-button>
 				    </md-radio-group>
 				</div>
     		</div>
-  		</div>
+  	<!-- 	</div> -->
+        </md-content>
+    </md-sidenav>
+	<md-content flex layout-fill>
+		<div layout="row" layout-fill > 
+	  		
 			<div  flex>
 				<div ng-if="editContentType=='photo'">
 					<div class="uploadButton" ngf-select ng-model="file" ngf-multiple="false">Select File</div>
