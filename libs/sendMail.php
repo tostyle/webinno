@@ -25,8 +25,8 @@
          if( !$mail->Send() )
          {
          	echo 'mail senrdd';
-            $sql="INSERT INTO career (name,position,address,mobile,email,portfolio) VALUES 
-                (:name,:position,:address,:mobile,:email,:portfolio)";
+            $sql="INSERT INTO career (name,position,address,mobile,email,portfolio,send_date) VALUES 
+                (:name,:position,:address,:mobile,:email,:portfolio,CURDATE())";
             $query = $db->prepare($sql);
              $query->bindParam(':name'    , $_POST['registerName']);
              $query->bindParam(':position'    , $_POST['position']);
