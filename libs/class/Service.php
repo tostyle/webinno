@@ -8,6 +8,7 @@ namespace Model;
 		public function __construct( $connect )
 		{
 			parent::__construct( $connect );
+			$this->section="service";
 		}
 		public function getTotalSequence()
 		{
@@ -20,7 +21,7 @@ namespace Model;
 		public function getData()
 		{
 			$this->sql="SELECT * FROM {$this->table} 
-						WHERE section='aboutUs' 
+						WHERE section='service' 
 						AND type='text' {$this->order}";
 			$query = $this->connect->prepare( $this->sql );
 			$query->execute();

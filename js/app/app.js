@@ -1,10 +1,11 @@
-var adminApp = angular.module('adminApp', ['ngMaterial','ngRoute','ngFileUpload'])
+var adminApp = angular.module('adminApp', ['ngMaterial','ngRoute','ngFileUpload','ui.tinymce'])
 	.config(function($mdThemingProvider , $routeProvider ) {
 		$mdThemingProvider.theme('altTheme')
 			.backgroundPalette('blue' ,{
      			'default' : '700',
      			'hue-1': '300'
      		});
+
   		$mdThemingProvider.theme('default')
     		.primaryPalette('blue',{
     			'default' :'800',
@@ -15,6 +16,7 @@ var adminApp = angular.module('adminApp', ['ngMaterial','ngRoute','ngFileUpload'
      			'default' : '100',
      			'hue-1' : '500'
      		});
+
      	$routeProvider
      		.when('/', {
 	     		templateUrl: '../templates/admin/home.html',

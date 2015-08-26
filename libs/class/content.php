@@ -74,6 +74,13 @@
 			$this->result = $query->fetchAll(PDO::FETCH_ASSOC);
 			return $this->result;
 		}
+		public function getDefaultData(){
+			$this->setDataSQL();
+			$query = $this->connect->prepare( $this->sql );
+			$query->execute();
+			$this->result = $query->fetchAll(PDO::FETCH_ASSOC);
+			return $this->result;
+		}
 		public function getDataByName( $name )
 		{
 			$filter =" AND name='{$name}'";

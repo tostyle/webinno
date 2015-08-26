@@ -37,16 +37,35 @@
   	<!-- 	</div> -->
         </md-content>
     </md-sidenav>
-	<md-content flex layout-fill>
+	<md-content flex layout-fill  class="md-padding">
 		<div layout="row" layout-fill > 
 	  		
 			<div  flex>
-				<div ng-if="editContentType=='photo'">
-					<div class="uploadButton" ngf-select ng-model="file" ngf-multiple="false">Select File</div>
+				<div ng-if="editContentType=='photo'"> 
+					 <md-content md-theme="altTheme">
+						<div class="preview-content" md-theme="altTheme" layout="row" layout-align="center center">
+					 
+					  <div >xxxxx</div>
+					
+					</div>
+  					</md-content>
+  					  <input type="file" ngf-select ng-model="picFile" name="file"    
+             accept="image/*" >
+             {{ picFile }} 
+             <md-button class="md-raised md-primary" ng-click="upload();"> Save Content </md-button>
+				<!-- 	<div class="uploadButton" ngf-select ng-model="file" ngf-multiple="false">Select File</div> -->
 				</div>
 				<div ng-if="editContentType=='text'">
+				 <md-content md-theme="altTheme">
+						<div class="preview-content" md-theme="altTheme" layout="row" layout-align="center center">
+					 
+					  <div >{{  editContent.detail }}</div>
+					
+					</div>
+  					</md-content>
+					
 				
-					<textarea name="" id="" cols="30" rows="5" ng-model="editContent.detail">{{ editContent.detail }}</textarea>
+					<textarea ui-tinymce="tinymceOptions" name="" id="" cols="30" rows="5" ng-model="editContent.detail">{{ editContent.detail }}</textarea>
 					<md-button class="md-raised md-primary" ng-click="saveContent();"> Save Content </md-button>
 				</div>
 			</div>

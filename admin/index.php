@@ -113,7 +113,7 @@ session_start();
                 # code...
                 break;
         }
-        $datas = $sectionClass->getData();
+        $datas = $sectionClass->getDefaultData();
         $datas = $sectionClass->setDataByType( $datas );
         echo json_encode($datas);
     }
@@ -129,6 +129,7 @@ session_start();
            $query = $app->db->prepare($sql);
            $query->execute();
            $result['success']=true;
+           $result['previewPic'] = $targetFile;
         }
         else
         {
