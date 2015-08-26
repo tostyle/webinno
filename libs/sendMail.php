@@ -1,4 +1,4 @@
-<?php  
+<?php   
 	require_once('PHPMailer/PHPMailerAutoload.php');
     include('connect.php');
 	$mail = new PHPMailer(); // create a new object
@@ -24,19 +24,22 @@
     // $mail->Send();
          if( !$mail->Send() )
          {
-         	echo 'mail senrdd';
-            $sql="INSERT INTO career (name,position,address,mobile,email,portfolio,send_date) VALUES 
-                (:name,:position,:address,:mobile,:email,:portfolio,CURDATE())";
-            $query = $db->prepare($sql);
-             $query->bindParam(':name'    , $_POST['registerName']);
-             $query->bindParam(':position'    , $_POST['position']);
-             $query->bindParam(':address'    , $_POST['address']);
-             $query->bindParam(':mobile'    , $_POST['mobile']);
-             $query->bindParam(':email'    , $_POST['email']);
-             $query->bindParam(':portfolio'    , $_POST['portfolio']);
-             $query->execute();
+            $result['error']=true;
+         	
+           
          }
          else
          {
-         	echo 'noetrnsetf'ว
+         	$result['success']=true;
+             $sql="INSERT INTO career (name,position,address,mobile,email,portfolio,send_date) VALUES 
+                (:name,:position,:address,:mobile,:email,:portfolio,CURDATE())";
+            $query = $db->prepare($sql);
+             $query->bindParam(':name'     , $_POST['registerName']);
+             $query->bindParam(':position' , $_POST['position']);
+             $query->bindParam(':address'  , $_POST['address']);
+             $query->bindParam(':mobile'   , $_POST['mobile']);
+             $query->bindParam(':email'    , $_POST['email']);
+             $query->bindParam(':portfolio', $_POST['detail']);
+             $query->execute();
          }
+         echo json_encode($result);
