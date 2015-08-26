@@ -1,8 +1,12 @@
 <div class="inno">
 	<h2 class="text-center"><?php echo $contents['stat']['head1'] ?></h2>	
 	<div class="stat-pic">
-		 <div id="canvas-holder" style="width:13%">
-          <canvas id="chart-area" width="105" height="110"/>
+		 <div  >
+          <div id="circle-1" class="circle" 
+          		data-dimension="105" 
+          		data-text="2014" 
+          		data-info="Sweet" 
+          		data-width="15" data-fontsize="20" data-percent="85" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd" data-total="100" data-part="85"></div>
         </div>
 		<div>
 			<img src="photo/statistics-information/pic-2014-power.png">

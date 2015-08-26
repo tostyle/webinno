@@ -110,6 +110,7 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/jquery.bxslider.css" rel="stylesheet">
+    <link href="css/jquery.circliful.css" rel="stylesheet">
 
     <!-- Custom CSS -->
  <!--    <link href="css/full-width-pics.css" rel="stylesheet"> -->
@@ -179,40 +180,15 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
     <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.circliful.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
-    <script src="js/Chart.js"></script>
     <script type="text/javascript">
       var homeLogoPics = <?=json_encode( $photos['homeLogo'])?> ; 
       var modalAboutUs = <?=json_encode( $contents['modalAboutUs']['detailContent'])?> ; 
       
-      var doughnutData = [
-        {
-          value: 400,
-          color:"#F7464A",
-          highlight: "#FF5A5E",
-          label: "Red"
-        },
-        {
-          value: 300,
-          color: "#ffffff",
-          highlight: "#ffffff",
-          label: "Green"
-        }
-
-      ];
-
-      window.onload = function(){
-        var ctx = document.getElementById("chart-area").getContext("2d");
-        window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {
-          segmentShowStroke : true,
-          responsive : true
-
-
-        });
-        ctx.fillText("Hello World!",10,50);
-      };
-      /////////
+   
         $(document).ready(function(){
+           $('#circle-1').circliful();
           // $('#firstPageModal').modal('show');
           $('#submitCareerForm').click(function(event) {
             var formData = $('#registerForm').serialize();
@@ -222,8 +198,9 @@
               dataType: 'json',
               data: formData,
             })
-            .done(function() {
-              alert('ส่งอีเมล์ถึง HR เรียบร้อย');
+            .done(function(result) {
+              if(result.success)
+                alert('ส่งอีเมล์ถึง HR เรียบร้อย');
             });
             
           });
