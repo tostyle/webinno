@@ -44,15 +44,18 @@
 				<div ng-if="editContentType=='photo'"> 
 					 <md-content md-theme="altTheme">
 						<div class="preview-content" md-theme="altTheme" layout="row" layout-align="center center">
-					 
-					  <div >xxxxx</div>
+					  	<div >
+					  		<img class="preview-pic" ng-show="editContent.detail" src="../{{ editContent.detail }}" alt="">
+					  		<img class="preview-pic" ng-show="!picFile.$error && picFile" 
+					  		 ngf-src="!picFile.$error && picFile">
+					  	</div>
 					
 					</div>
   					</md-content>
   					  <input type="file" ngf-select ng-model="picFile" name="file"    
              accept="image/*" >
              {{ picFile }} 
-             <md-button class="md-raised md-primary" ng-click="upload();"> Save Content </md-button>
+             <md-button class="md-raised md-primary" ng-click="upload(picFile);"> Save Content </md-button>
 				<!-- 	<div class="uploadButton" ngf-select ng-model="file" ngf-multiple="false">Select File</div> -->
 				</div>
 				<div ng-if="editContentType=='text'">

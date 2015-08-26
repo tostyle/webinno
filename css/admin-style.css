@@ -22,10 +22,11 @@ md-whiteframe.login-whiteframe
 .preview-content
 {
     min-height: 150px;
+
     color: white;
 }
 .preview-pic
 {
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
 }

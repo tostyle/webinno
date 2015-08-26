@@ -31,10 +31,9 @@ adminApp.controller('DashboardCtrl', ['$scope','$rootScope','$routeParams','Menu
             console.log(result);
         });
     }
-    $scope.upload = function (files) {
-        if (files && files.length) {
-            for (var i = 0; i < files.length; i++) {
-                var file = files[i];
+    $scope.upload = function (file) {
+        if (file) {
+           
                 Upload.upload({
                     url: 'uploadPic',
                     fields: {
@@ -42,15 +41,14 @@ adminApp.controller('DashboardCtrl', ['$scope','$rootScope','$routeParams','Menu
                     },
                     file: file
                 }).progress(function (evt) { 
-              //   	 var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-            		// console.log('progress: ' + progressPercentage + '% ' + evt.config.file.name);
-                }).success(function (data, status, headers, config) { 
-                    
-                	 console.log('file ' + config.file.name + 'uploaded. Response: ' + data);
+              //     var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+                    // console.log('progress: ' + progressPercentage + '% ' + evt.config.file.name);
+                }).success(function (data, status, headers, config) {
+                     console.log('file ' + config.file.name + 'uploaded. Response: ' + data);
                 }).error(function (data, status, headers, config) {
-		            console.log('error status: ' + status);
-		        });
-            }
+                    console.log('error status: ' + status);
+                });
+           
         }
     };
 }])
