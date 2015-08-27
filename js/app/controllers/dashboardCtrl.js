@@ -26,9 +26,10 @@ adminApp.controller('DashboardCtrl', ['$scope','$rootScope','$routeParams','Menu
         }
     });
     $scope.saveContent =function(){
-         console.log($scope.editContent);
+      
         Section.saveContent( $scope.editContent ).success(function(result){
-            console.log(result);
+            if(result.success)
+                alert('content updated');
         });
     }
     $scope.upload = function (file) {

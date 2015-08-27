@@ -1,4 +1,4 @@
-var adminApp = angular.module('adminApp', ['ngMaterial','ngRoute','ngFileUpload','ui.tinymce'])
+var adminApp = angular.module('adminApp', ['ngMaterial','ngRoute','ngSanitize','ngFileUpload','ui.tinymce'])
 	.config(function($mdThemingProvider , $routeProvider ) {
 		$mdThemingProvider.theme('altTheme')
 			.backgroundPalette('blue' ,{

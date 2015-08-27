@@ -147,6 +147,8 @@ session_start();
        $sql="UPDATE content SET detail='{$content->detail}' WHERE id='{$content->id}'";
            $query = $app->db->prepare($sql);
            $query->execute();
-        // var_dump($content);
+
+        $result['success']=true;
+        echo json_encode($result);
     }
   
