@@ -5,10 +5,10 @@ namespace Model;
 	use PDO;
 	class Footer extends Content
 	{
-		public function __construct( $connect )
+		public function __construct( $connect,$language )
 		{
 			$this->section = 'footer';
-			parent::__construct( $connect );
+			parent::__construct( $connect,$language );
 		}
 	
 	}

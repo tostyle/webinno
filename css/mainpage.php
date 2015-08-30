@@ -553,6 +553,16 @@ award
 .award-logo
 {
 	margin-right: 84px;
+	position:relative
+}
+.award-logo h2
+{
+	color:white;
+	position: absolute; 
+   top: 60px; 
+   left: 50px; 
+   font-size:75px;
+  
 }
 .award-detail
 {

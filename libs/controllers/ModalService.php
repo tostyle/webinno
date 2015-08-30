@@ -1,10 +1,10 @@
 <?php 
 	namespace Controller;
-	class ModalService
+	class ModalService extends \Controller\Controller
 	{
 		public function __construct()
 		{
-
+			
 		}
 		public function setContent($datas)
 		{

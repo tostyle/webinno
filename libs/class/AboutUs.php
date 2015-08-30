@@ -5,7 +5,7 @@ namespace Model;
 	use PDO;
 	class AboutUs extends Content
 	{
-		public function __construct( $connect ,$language)
+		public function __construct( $connect ,$language )
 		{
 			$this->section="aboutUs";
 			parent::__construct( $connect ,$language);

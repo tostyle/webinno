@@ -11,7 +11,7 @@
 		public $enabled;
 		public $language;
 		public $result;
-		public function __construct( $connect ,$language)
+		public function __construct( $connect ,$language='en')
 		{
 			$this->connect = $connect;
 			$this->table= 'content';

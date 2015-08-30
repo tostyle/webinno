@@ -2,9 +2,9 @@
 	namespace Controller;
 	class ModalAboutUs extends \Controller\Controller
 	{
-		public function __construct()
+		public function __construct(  )
 		{
-
+			
 		}
 		
 		public function getContent( $model )

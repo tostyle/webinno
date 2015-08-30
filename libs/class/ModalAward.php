@@ -5,10 +5,10 @@ namespace Model;
 	use PDO;
 	class ModalAward extends Content
 	{
-		public function __construct( $connect )
+		public function __construct( $connect,$language )
 		{
 			$this->section="modal-award";
-			parent::__construct( $connect );
+			parent::__construct( $connect,$language );
 		}
 		public function getData()
 		{
