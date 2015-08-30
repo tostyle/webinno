@@ -3,7 +3,7 @@
 </div><!--
 --><div class="aboutUs-detail">
 	<h2><?=$contents['aboutUs']['main-head']?></h2>
-	<?=$contents['aboutUs']['main-content']?>
+	<p><?=$contents['aboutUs']['main-content']?></p>
 	<div>
 		<div>
 			<div class="about-us-subject-detail">
@@ -11,7 +11,7 @@
 			</div>
 			<div class="about-us-subject-detail">
 				<h3><?=$contents['aboutUs']['vision-head']?></h3>
-				<?=$contents['aboutUs']['vision-content']?>
+				<p><?=$contents['aboutUs']['vision-content']?></p>
 			</div>
 		</div>
 		<div  class="about-us-subject">
@@ -20,7 +20,7 @@
 			</div>
 			<div class="about-us-subject-detail">
 				<h3><?=$contents['aboutUs']['mission-head']?></h3>
-				<?=$contents['aboutUs']['mission-content']?>
+				<p><?=$contents['aboutUs']['mission-content']?></p>
 			</div>
 		</div>
 		<div class="about-us-read-more">

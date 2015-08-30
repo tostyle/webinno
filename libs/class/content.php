@@ -11,11 +11,13 @@
 		public $enabled;
 		public $language;
 		public $result;
-		public function __construct( $connect )
+		public function __construct( $connect ,$language)
 		{
 			$this->connect = $connect;
 			$this->table= 'content';
 			$this->getEnabled();
+			if(!empty($language))
+			$this->setLanguage($language);
 		}
 		public function setLanguage( $language )
 		{
@@ -63,7 +65,7 @@
 		{
 			$this->sql="SELECT * FROM {$this->table} 
 						WHERE section='{$this->section}' {$filter}
-						{$this->enabled} {$this->order}";
+						{$this->enabled} {$this->language} {$this->order}";
 			return $this->sql;
 		}
 		public function getData()

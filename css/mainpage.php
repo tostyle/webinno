@@ -4,10 +4,10 @@
     require_once($root.'libs/class/autoload.php');
     require_once($root.'libs/controllers/autoload.php');
 
-	 $stat    = new \Model\Stat($db);
-	 $aboutUs = new \Model\AboutUs($db);
-	 $service = new \Model\Service($db);
-	 $firstpage   = new \Model\ModalFirstPage($db);
+	 $stat    = new \Model\Stat($db,$_GET['language']);
+	 $aboutUs = new \Model\AboutUs($db,$_GET['language']);
+	 $service = new \Model\Service($db,$_GET['language']);
+	 $firstpage   = new \Model\ModalFirstPage($db,$_GET['language']);
 
      $statController    = new \Controller\Stat();
      $aboutUsController = new \Controller\AboutUs();
@@ -230,6 +230,10 @@ vertical-align: middle;
 stat information
 =================================================================================================
 */
+.circle-graph
+{
+float:left;
+}
 .statInfomation
 {
 	 background-image: url("../<?php echo $photos['stat']['background']?>");

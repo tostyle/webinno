@@ -7,19 +7,23 @@
   require_once('libs/connect.php');
   require_once('libs/class/autoload.php');
   require_once('libs/controllers/autoload.php');
+
+  $language='en';
+  if(!empty($_GET['language']))
+    $language=$_GET['language'];
   /* Models */
-  $menu     = new \Model\Menu($db);
-  $home     = new \Model\Home($db);
-  $homeLogo = new \Model\HomeLogo($db);
-  $stat     = new \Model\Stat($db);
-  $aboutUs  = new \Model\AboutUs($db);
-  $service  = new \Model\Service($db);
-  $award    = new \Model\Award($db);
-  $career   = new \Model\Career($db);
-  $footer   = new \Model\Footer($db);
-  $modalAward   = new \Model\ModalAward($db);
-  $modalAboutUs   = new \Model\ModalAboutUs($db);
-  $modalService   = new \Model\ModalService($db);
+  $menu     = new \Model\Menu($db,$language );
+  $home     = new \Model\Home($db,$language);
+  $homeLogo = new \Model\HomeLogo($db,$language);
+  $stat     = new \Model\Stat($db,$language);
+  $aboutUs  = new \Model\AboutUs($db,$language);
+  $service  = new \Model\Service($db,$language);
+  $award    = new \Model\Award($db,$language);
+  $career   = new \Model\Career($db,$language);
+  $footer   = new \Model\Footer($db,$language);
+  $modalAward   = new \Model\ModalAward($db,$language);
+  $modalAboutUs   = new \Model\ModalAboutUs($db,$language);
+  $modalService   = new \Model\ModalService($db,$language);
   
   /* Controllers */
   $menuController     = new \Controller\Menu();
@@ -114,7 +118,7 @@
 
     <!-- Custom CSS -->
  <!--    <link href="css/full-width-pics.css" rel="stylesheet"> -->
-    <link href="css/mainpage.php" rel="stylesheet">
+    <link href="css/mainpage.php?language=<?=$language?>" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -188,7 +192,7 @@
       
    
         $(document).ready(function(){
-           $('#circle-1').circliful();
+           $('.circle-graph ').circliful();
           // $('#firstPageModal').modal('show');
           $('#submitCareerForm').click(function(event) {
             var formData = $('#registerForm').serialize();

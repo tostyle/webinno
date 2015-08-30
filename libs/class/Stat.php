@@ -5,15 +5,14 @@ namespace Model;
 	use PDO;
 	class Stat extends Content
 	{
-		public function __construct( $connect )
+		public function __construct( $connect,$language )
 		{
-			parent::__construct( $connect );
+			$this->section='stat';
+			parent::__construct( $connect,$language );
 		}
 		public function getData()
 		{
-			$this->sql="SELECT * FROM {$this->table} 
-						WHERE section='stat' 
-						AND type='text' {$this->order}";
+			$this->setDataSQL("AND type='text'");
 			$query = $this->connect->prepare( $this->sql );
 			$query->execute();
 			$result = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -21,9 +20,9 @@ namespace Model;
 		}
 		public function getPhoto()
 		{
-			$this->sql="SELECT * FROM {$this->table} 
-						WHERE section='stat' 
-						AND type='photo' {$this->order}";
+			
+			$this->setDataSQL("AND type='photo'");
+			
 			$query = $this->connect->prepare( $this->sql );
 			$query->execute();
 			$result = $query->fetchAll(PDO::FETCH_ASSOC);

@@ -5,10 +5,10 @@ namespace Model;
 	use PDO;
 	class Menu extends Content
 	{
-		public function __construct( $connect )
+		public function __construct( $connect ,$language )
 		{
 			$this->section='menu';
-			parent::__construct( $connect );
+			parent::__construct( $connect,$language );
 		}
 		public function getAllSection(){
 			$this->sql="SELECT section fROM content GROUP BY section";

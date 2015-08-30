@@ -5,9 +5,9 @@ namespace Model;
 	use PDO;
 	class Home extends Content
 	{
-		public function __construct( $connect )
+		public function __construct( $connect ,$language)
 		{
 			$this->section='home';
-			parent::__construct( $connect );
+			parent::__construct( $connect,$language );
 		}
 	}
