@@ -22,7 +22,11 @@ var adminApp = angular.module('adminApp', ['ngMaterial','ngRoute','ngSanitize','
 	     		templateUrl: '../templates/admin/home.html',
 	     		controller: 'HomeCtrl'
 	     	})
-	     	.when('/dashboard/:section?', {
+	  //    	.when('/dashboard/:section?', {
+			// 	templateUrl : '../templates/admin/dashboard.html',
+			// 	controller  : 'DashboardCtrl'
+			// })
+			.when('/dashboard/:section/:language', {
 				templateUrl : '../templates/admin/dashboard.html',
 				controller  : 'DashboardCtrl'
 			})

@@ -31,8 +31,10 @@ session_start();
     $app->get('/menu', 'getMenus');
     $app->get('/section', 'getAllSection');
     $app->post('/uploadPic', 'uploadPic');
-    $app->get('/content/:sectionName', 'getContent');
+    $app->post('/addNewPic', 'addNewPic');
+    $app->get('/content/:sectionName/:language', 'getContent');
     $app->post('/content', 'updateContent');
+    $app->post('/newContent', 'addNewContent');
    
 
     $app->run(); 
@@ -44,13 +46,13 @@ session_start();
     function getMenus()
     {
         $app = Slim::getInstance();
-        $menuClass =new \Model\Menu( $app->db );
+        $menuClass =new \Model\Menu( $app->db,'en' );
         $menus = $menuClass->getData();
         echo json_encode( $menus );
     }   
     function getAllSection(){
         $app = Slim::getInstance();
-        $menuClass =new \Model\Menu( $app->db );
+        $menuClass =new \Model\Menu( $app->db ,'en');
         $menus = $menuClass->getAllSection();
         echo json_encode( $menus );
     }
@@ -69,45 +71,45 @@ session_start();
         stat
 
      */
-    function getContent( $sectionName )
+    function getContent( $sectionName ,$language)
     {
         $app = Slim::getInstance();
         switch ($sectionName) {
             case 'home':
-                    $sectionClass = new \Model\Home($app->db);
+                    $sectionClass = new \Model\Home($app->db,$language);
                 break;
             case 'homeLogo':
-                    $sectionClass = new \Model\HomeLogo($app->db);
+                    $sectionClass = new \Model\HomeLogo($app->db,$language);
                 break;
             case 'aboutus':
-                    $sectionClass = new \Model\AboutUs($app->db);
+                    $sectionClass = new \Model\AboutUs($app->db,$language);
                 break;
             case 'award':
-                    $sectionClass = new \Model\Award($app->db);
+                    $sectionClass = new \Model\Award($app->db,$language);
                 break;
             case 'career':
-                    $sectionClass = new \Model\Career($app->db);
+                    $sectionClass = new \Model\Career($app->db,$language);
                 break;
             case 'firstpage':
-                    $sectionClass = new \Model\ModalFirstPage($app->db);
+                    $sectionClass = new \Model\ModalFirstPage($app->db,$language);
                 break;
             case 'footer':
-                    $sectionClass = new \Model\Footer($app->db);
+                    $sectionClass = new \Model\Footer($app->db,$language);
                 break; 
             case 'service':
-                    $sectionClass = new \Model\Service($app->db);
+                    $sectionClass = new \Model\Service($app->db,$language);
                 break;
              case 'stat':
-                    $sectionClass = new \Model\Stat($app->db);
+                    $sectionClass = new \Model\Stat($app->db,$language);
                 break;
             case 'modal-aboutUs':
-                    $sectionClass = new \Model\ModalAward($app->db);
+                    $sectionClass = new \Model\ModalAboutUs($app->db,$language);
                 break;
             case 'modal-award':
-                    $sectionClass = new \Model\ModalAboutUs($app->db);
+                    $sectionClass = new \Model\ModalAward($app->db,$language);
                 break;
             case 'modal-service':
-                    $sectionClass = new \Model\ModalService($app->db);
+                    $sectionClass = new \Model\ModalService($app->db,$language);
                 break;
             default:
                 # code...
@@ -116,6 +118,69 @@ session_start();
         $datas = $sectionClass->getDefaultData();
         $datas = $sectionClass->setDataByType( $datas );
         echo json_encode($datas);
+    }
+    function getInitialContentData( $section,$language ){
+         $app = Slim::getInstance();
+
+        switch ( $section ) {
+            case 'home':
+                $sectionClass       = new \Model\Home($app->db,$language);
+                $data['sequence']   = $sectionClass->getNewOrder();
+                $data['section_id'] = 'home'.$data['sequence'];
+                $data['detail'] = 'photo/slide-pic';
+                $data['name'] = 'home'.$data['sequence'];
+            break;
+            case 'modal-award':
+                $sectionClass       = new \Model\ModalAward($app->db,$language);
+                $data['sequence']   = $sectionClass->getNewOrder();
+                $data['section_id'] = 'pic-award0'.$data['sequence'];
+                $data['detail']     = 'photo/award';
+                $data['name']       = 'award';
+            break;
+            case 'career':
+                $sectionClass       = new \Model\Career($app->db,$language);
+                $data['sequence']   = $sectionClass->getNewOrder();
+                $data['section_id'] = 'pic-innovation-careers0'.$data['sequence'];
+                $data['detail']     = 'photo/careers';
+                $data['name'] = 'career-position-pic';
+            break;
+            
+            default:
+                # code...
+                break;
+        }
+
+        return $data;
+        
+    }
+    function addNewPic(){
+        $app           = Slim::getInstance();
+        $content       = json_decode($_POST['contentDetail']);
+        $initalContent = getInitialContentData($content->section,$content->language);
+        $targetDir     = $initalContent['detail'];
+        $targetFile    = $targetDir."/".$_FILES["file"]["name"];
+        if(move_uploaded_file($_FILES["file"]["tmp_name"],'../'.$targetFile))
+        {
+            $sql="INSERT INTO content 
+           (section,section_id,name,detail,type,language,sequence) VALUES  (
+            '{$content->section}',
+            '{$initalContent['section_id']}',
+            '{$initalContent['name']}',
+            '{$targetFile}',
+            'photo',   'all',
+            '{$initalContent['sequence']}' )";
+
+           $query = $app->db->prepare($sql);
+           $query->execute();
+           $result['success']=true;
+           $result['previewPic'] = $targetFile;
+        }
+        else
+        {
+            $result['error']=true;
+        }
+         $result['success']=true;
+        return json_encode($result);
     }
     function uploadPic()
     {
@@ -135,7 +200,7 @@ session_start();
         {
             $result['error']=true;
         }
-        return $json_encode($result);
+        return json_encode($result);
     }
     function updateContent(){
         $app = Slim::getInstance();
@@ -150,5 +215,43 @@ session_start();
 
         $result['success']=true;
         echo json_encode($result);
+    }
+    function addNewContent()
+    {
+           $app = Slim::getInstance();
+      
+         $postdata = file_get_contents("php://input");
+        $content = json_decode($postdata);
+        $initialContent = getInitialContentData( $content->section,$content->language );
+        switch ($content->section) {
+            case 'career': 
+                    $sql="INSERT INTO content 
+                   (section,section_id,name,detail,type,language,sequence) VALUES  (
+                    '{$content->section}', '{$initialContent['section_id']}',
+                    'career-position', '{$content->detail}','text',
+                    'th',
+                    '{$initialContent['sequence']}' )";
+
+                   $query = $app->db->prepare($sql);
+                   $query->execute();
+
+                   $sql="INSERT INTO content 
+                   (section,section_id,name,detail,type,language,sequence) VALUES  (
+                    '{$content->section}', '{$initialContent['section_id']}',
+                    'career-position', '{$content->engDetail}','text',
+                    'en',
+                    '{$initialContent['sequence']}' )";
+
+                   $query = $app->db->prepare($sql);
+                   $query->execute();
+                break;
+            
+            default:
+                # code...
+                break;
+        }
+       
+         $result['success']=true;
+        return json_encode($result);
     }
   

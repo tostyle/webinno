@@ -20,4 +20,13 @@ namespace Model;
 			$result = $query->fetchAll(PDO::FETCH_ASSOC);
 			return $result;
 		}
+		public function getNewOrder(){
+
+			$this->sql="SELECT MAX(sequence)+1 NewOrder 
+			FROM content WHERE section='{$this->section}'";
+			$query = $this->connect->prepare($this->sql);
+			$query->execute();
+			$result = $query->fetch(PDO::FETCH_ASSOC);
+			return $result['NewOrder'];
+		}
 	}

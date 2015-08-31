@@ -10,4 +10,21 @@ namespace Model;
 			$this->section='home';
 			parent::__construct( $connect,$language );
 		}
+		public function initialData(){
+			$this->setDataSQL();
+			$query = $this->connect->prepare($this->sql);
+			$query->execute();
+			$result = $query->fetch(PDO::FETCH_ASSOC);
+			$result['section_id']=substr($result['section_id'],-1);
+			return $result;
+		}
+		public function getNewOrder(){
+
+			$this->sql="SELECT MAX(sequence)+1 NewOrder 
+			FROM content WHERE section='{$this->section}'";
+			$query = $this->connect->prepare($this->sql);
+			$query->execute();
+			$result = $query->fetch(PDO::FETCH_ASSOC);
+			return $result['NewOrder'];
+		}
 	}
