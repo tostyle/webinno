@@ -58,6 +58,7 @@
              accept="image/*" >
              {{ picFile }} 
              <md-button class="md-raised md-primary" ng-click="upload(picFile);"> Save Content </md-button>
+             <md-button class="md-raised md-warn" ng-click="deleteContent();">Delete</md-button>
 				<!-- 	<div class="uploadButton" ngf-select ng-model="file" ngf-multiple="false">Select File</div> -->
 				</div>
 				<div ng-if="editContentType=='text'">
@@ -72,7 +73,7 @@
 				
 					<textarea ui-tinymce="tinymceOptions" name="" id="" cols="30" rows="5" ng-model="editContent.detail">{{ editContent.detail }}</textarea>
 					<md-button class="md-raised md-primary" ng-click="saveContent();"> Save Content </md-button>
-
+					
 					
 				</div>
 			</div>
@@ -90,7 +91,8 @@
 				</div>
 				 <input type="file" ngf-select ng-model="newContent.picFile" name="file"    
              			accept="image/*" >
-				<md-button class="md-raised md-accent" ng-click="addContent();"> Add Content </md-button>
+				<md-button class="md-raised md-primary" ng-click="addContent();"> Add Content </md-button>
+				
 			</div>
 		</div>
 	</md-content>

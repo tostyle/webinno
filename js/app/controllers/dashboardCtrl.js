@@ -42,6 +42,12 @@ adminApp.controller('DashboardCtrl', ['$scope','$rootScope','$routeParams','$q',
                 alert('content updated');
         });
     }
+    $scope.deleteContent=function(){
+        Section.deleteContent( $scope.editContent ).success(function(result){
+            if(result.success)
+                alert('content updated');
+        });
+    }
     $scope.addContent= function(){ 
         $scope.newContent.section  = $routeParams.section;
         $scope.newContent.language = $routeParams.language;

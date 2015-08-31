@@ -35,6 +35,8 @@ session_start();
     $app->get('/content/:sectionName/:language', 'getContent');
     $app->post('/content', 'updateContent');
     $app->post('/newContent', 'addNewContent');
+    $app->post('/deletecontent', 'deleteContent');
+    $app->delete('/content', 'deleteContent');
    
 
     $app->run(); 
@@ -253,5 +255,12 @@ session_start();
        
          $result['success']=true;
         return json_encode($result);
+    }
+    function deleteContent(){
+          $app = Slim::getInstance();
+       $deleteData =$app->request->delete();
+       $sql="DELETE FROM content WHERE id='{$deleteData['id']}'";
+       $result['success']=true;
+        echo json_encode($result);
     }
   
