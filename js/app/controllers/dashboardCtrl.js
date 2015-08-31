@@ -55,7 +55,7 @@ adminApp.controller('DashboardCtrl', ['$scope','$rootScope','$routeParams','$q',
             });
             var addNewContent = Section.addContent( $scope.newContent );
             $q.all([uploadNewPic, addNewContent]).then(function(results) {
-                console.log(result);
+                alert('Update Completed');
             });
         }
         else if( $scope.canAddPic){
@@ -69,7 +69,7 @@ adminApp.controller('DashboardCtrl', ['$scope','$rootScope','$routeParams','$q',
           //     var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
                 // console.log('progress: ' + progressPercentage + '% ' + evt.config.file.name);
             }).success(function (data, status, headers, config) {
-                 console.log('file ' + config.file.name + 'uploaded. Response: ' + data);
+                 alert('Update Completed');
             }).error(function (data, status, headers, config) {
                 console.log('error status: ' + status);
             });
