@@ -211,7 +211,10 @@ session_start();
          $postdata = file_get_contents("php://input");
         $content = json_decode($postdata);
        
-       $sql="UPDATE content SET detail='{$content->detail}' WHERE id='{$content->id}'";
+       $sql="UPDATE content SET 
+            detail='{$content->detail}' ,
+            sequence='{$content->sequence}'
+            WHERE id='{$content->id}'";
            $query = $app->db->prepare($sql);
            $query->execute();
 

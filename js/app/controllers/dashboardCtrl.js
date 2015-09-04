@@ -101,5 +101,12 @@ adminApp.controller('DashboardCtrl', ['$scope','$rootScope','$routeParams','$q',
                 });
            
         }
+        else
+        {
+            Section.saveContent( $scope.editContent ).success(function(result){
+                if(result.success)
+                    alert('content updated');
+            });
+        }
     };
 }])
