@@ -3,6 +3,17 @@ adminApp.factory('Section', ['$http',function ($http) {
 	section.getContentInSection = function( sectionName ,language){
 		return $http.get('content/'+sectionName+'/'+language);
 	};
+	section.getGraph = function(){
+		return $http.get('graph');
+	};
+	section.updateGraph = function( content ){
+		return $http({
+		  method  : 'post',
+		  url     : 'graph',
+		  data    : $.param(content),  // pass in data as strings
+		  headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
+		 });
+	};
 	section.saveContent = function( content ){
 		return $http({
 		  method  : 'post',

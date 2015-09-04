@@ -9,6 +9,7 @@ session_start();
 //     $_SESSION['loginUser']='';
     require_once '../libs/connect.php';
     require_once '../libs/class/autoload.php';
+    require_once '../libs/class/Graph.php';
     require_once '../libs/Slim/Slim/Slim.php';
 
 
@@ -30,6 +31,8 @@ session_start();
     $app->get('/', 'home');
     $app->get('/menu', 'getMenus');
     $app->get('/section', 'getAllSection');
+    $app->get('/graph', 'getGraph');
+    $app->post('/graph', 'editGraph');
     $app->post('/uploadPic', 'uploadPic');
     $app->post('/addNewPic', 'addNewPic');
     $app->get('/content/:sectionName/:language', 'getContent');
@@ -40,6 +43,25 @@ session_start();
    
 
     $app->run(); 
+    function getGraph(){
+         $app = Slim::getInstance();
+         $graphClass =new \Model\Graph( $app->db);
+        $graphs = $graphClass->getData();
+        echo json_encode( $graphs );
+    }
+    function editGraph(){
+         $app = Slim::getInstance();
+         $sql="UPDATE graph SET 
+                    head='{$_POST['head']}',
+                    detail='{$_POST['detail']}',
+                    value='{$_POST['value']}',
+                    totalValue='{$_POST['totalValue']}'
+                    WHERE id='{$_POST['id']}'";
+        $query = $app->db->prepare($sql);
+        $query->execute();
+        $result['success']=true;
+        echo json_encode($result);
+    }
     function home($username='')
     {
         $app = Slim::getInstance();

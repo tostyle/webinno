@@ -26,9 +26,9 @@ var adminApp = angular.module('adminApp', ['ngMaterial','ngRoute','ngSanitize','
 			// 	templateUrl : '../templates/admin/dashboard.html',
 			// 	controller  : 'DashboardCtrl'
 			// })
-			.when('/dashboard/:section/:language', {
+			.when('/dashboard/graph', {
 				templateUrl : '../templates/admin/graph.html',
-				controller  : 'DashboardCtrl'
+				controller  : 'GraphCtrl'
 			})
 			.when('/dashboard/:section/:language', {
 				templateUrl : '../templates/admin/dashboard.html',

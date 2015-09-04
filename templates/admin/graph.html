@@ -1,39 +1,17 @@
 <admin-menu></admin-menu>
 <section layout="row" flex>
 	<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
-        <md-toolbar class="md-theme-indigo">
-        	<h1 class="md-toolbar-tools">Select Section</h1>
-        </md-toolbar>
-        <md-content class="md-padding">
-            <form name="contactForm" data-ng-submit="sendMail()">
-                <md-select ng-model="selectedSection" placeholder="Select Page Section">
-		          	<md-option ng-repeat="section in sections" value="{{section.section}}">{{section.section}}</md-option>
-		        </md-select>
-		        <md-select ng-model="language" placeholder="Select Language">
-		          	<md-option value="en">English</md-option>
-		          	<md-option value="th">Thai</md-option>
-		        </md-select>
-                <md-button  class="md-raised md-primary" href="#dashboard/{{ selectedSection }}/{{ language }}">Go</md-button>	
-            </form>
-        </md-content>
+        
         <md-content>
         	
            <!--  <div class="content-text" flex> -->
-    		<div layout="column">
+    		<div layout="column" layout-fill>
     			<div flex>
 				   	<md-toolbar class="md-theme-indigo">
-	        			<h2 class="md-toolbar-tools">Photo Content</h2>
+	        			<h2 class="md-toolbar-tools">Graph Content</h2>
 	        		</md-toolbar>
-				     <md-radio-group ng-model="photoID" ng-change="getContentDetail('photo')">
-				      	<md-radio-button ng-repeat="photo in contents.photo" value="{{photo.id}}" >{{photo.name}}</md-radio-button>
-				    </md-radio-group>
-				</div>
-				<div flex>
-				    <md-toolbar class="md-theme-indigo">
-	        			<h2 class="md-toolbar-tools">Text Content</h2>
-	        		</md-toolbar>
-				     <md-radio-group ng-model="contentID" ng-change="getContentDetail('text')">
-				      	<md-radio-button ng-repeat="content in contents.text" value="{{content.id}}" >{{content.name}}</md-radio-button>
+				     <md-radio-group ng-model="graphID" ng-change="getContentDetail()">
+				      	<md-radio-button ng-repeat="graph in graphs" value="{{graph.id}}" >{{graph.name+' '+graph.head}}</md-radio-button>
 				    </md-radio-group>
 				</div>
 
@@ -44,59 +22,28 @@
 	<md-content flex layout-fill  class="md-padding">
 		<div layout="column" layout-fill > 
 			<div  flex ng-show="editContent">
-				<div ng-if="editContentType=='photo'"> 
-					<md-content md-theme="altTheme">
-						<div class="preview-content" md-theme="altTheme" layout="row" layout-align="center center">
-					  	<div >
-					  		<img class="preview-pic" ng-show="editContent.detail" src="../{{ editContent.detail }}" alt="">
-					  		<img class="preview-pic" ng-show="!picFile.$error && picFile" 
-					  		 ngf-src="!picFile.$error && picFile">
-					  	</div>
-						</div>
-  					</md-content>
-  					  <input type="file" ngf-select ng-model="picFile" name="file"    
-             accept="image/*" >
-             {{ picFile }} 
-              <md-input-container>
-		      <label>Sequece</label>
-		      <input ng-model="editContent.sequence">
-		    </md-input-container>
-             <md-button class="md-raised md-primary" ng-click="upload(picFile);"> Save Content </md-button>
-             <md-button class="md-raised md-warn" ng-click="deleteContent();">Delete</md-button>
-				<!-- 	<div class="uploadButton" ngf-select ng-model="file" ngf-multiple="false">Select File</div> -->
-				</div>
-				<div ng-if="editContentType=='text'">
-				 <md-content md-theme="altTheme">
-						<div class="preview-content" md-theme="altTheme" layout="row" layout-align="center center">
-					 
-					  <div ng-bind-html="editContent.detail" ></div>
-					
-					</div>
-  					</md-content>
-					
-					
-					<textarea ui-tinymce="tinymceOptions" name="" id="" cols="30" rows="5" ng-model="editContent.detail">{{ editContent.detail }}</textarea>
-					<md-button class="md-raised md-primary" ng-click="saveContent();"> Save Content </md-button>
-					
-					
-				</div>
-			</div>
-			<div  flex ng-show="canAddText || canAddPic">
-				<h2 class="md-toolbar-tools">Add New Content</h2>
-				<div flex ng-show="canAddText" >
-				<h3>Thai Language</h3>
-				<textarea ui-tinymce="tinymceOptions"  
-						ng-model="newContent.detail">{{ newContent.detail }}</textarea>
-				</div>
-				<div flex ng-show="canAddText" >
-				<h3>English Language</h3>
-				<textarea ui-tinymce="tinymceOptions"  
-						ng-model="newContent.detail">{{ newContent.engDetail }}</textarea>
-				</div>
-				 <input type="file" ngf-select ng-model="newContent.picFile" name="file"    
-             			accept="image/*" >
-				<md-button class="md-raised md-primary" ng-click="addContent();"> Add Content </md-button>
-				
+				 <form name="userForm">
+				      <div layout layout-sm="column">
+				        <md-input-container style="width:80%">
+				            <label>Head</label>
+				            <input ng-model="editContent.head" >
+				          </md-input-container>
+				        <md-input-container flex>
+				           <label>Detail</label>
+				            <input ng-model="editContent.detail" >
+				        </md-input-container>
+				        <md-input-container style="width:80%">
+				            <label>Value</label>
+				            <input ng-model="editContent.value" >
+				          </md-input-container>
+				        <md-input-container flex>
+				           <label>Total</label>
+				            <input ng-model="editContent.totalValue" >
+				        </md-input-container>
+
+				      </div>
+				       <md-button  class="md-raised md-primary" ng-click="saveContent()">Update Graph</md-button>
+				 </form>
 			</div>
 		</div>
 	</md-content>
