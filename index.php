@@ -6,6 +6,7 @@
 
   require_once('libs/connect.php');
   require_once('libs/class/autoload.php');
+  require_once('libs/class/Graph.php');
   require_once('libs/controllers/autoload.php');
 
   $language='en';
@@ -24,6 +25,8 @@
   $modalAward   = new \Model\ModalAward($db,$language);
   $modalAboutUs   = new \Model\ModalAboutUs($db,$language);
   $modalService   = new \Model\ModalService($db,$language);
+  $graphModel = new \Model\Graph($db);
+  $graph = $graphModel->getData();
   
   /* Controllers */
   $menuController     = new \Controller\Menu();
