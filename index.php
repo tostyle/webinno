@@ -196,7 +196,7 @@
    
         $(document).ready(function(){
            $('.circle-graph ').circliful();
-          // $('#firstPageModal').modal('show');
+          $('#firstPageModal').modal('show');
           $('#submitCareerForm').click(function(event) {
             var formData = $('#registerForm').serialize();
             $.ajax({
