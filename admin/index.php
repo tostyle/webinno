@@ -7,6 +7,7 @@
 session_start();
 // if(!isset($_SESSION['loginUser']))
 //     $_SESSION['loginUser']='';
+$root = '../';
     require_once '../libs/connect.php';
     require_once '../libs/class/autoload.php';
     require_once '../libs/class/Graph.php';
