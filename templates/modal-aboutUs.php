@@ -6,7 +6,7 @@
          <div class="aboutUs-picture">
         <!--   -->
          	  <?php foreach ($contents['modalAboutUs']['mainContent'] as $key => $aboutUs):?>
-                <img data-toggle="modal" href="#aboutUsDetailModal" class="team-detail" id="pic-01" src="<?=$aboutUs['detail']?>" alt="">
+                <img data-toggle="modal" href="#aboutUsDetailModal" class="team-detail" id="pic-0<?=$aboutUs['sequence']?>" src="<?=$aboutUs['detail']?>" alt="">
             <?php endforeach;?>
          </div>
     </div>

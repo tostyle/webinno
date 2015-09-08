@@ -192,7 +192,7 @@
     <script type="text/javascript">
       var homeLogoPics = <?=json_encode( $photos['homeLogo'])?> ; 
       var modalAboutUs = <?=json_encode( $contents['modalAboutUs']['detailContent'])?> ; 
-      
+    
    
         $(document).ready(function(){
            $('.circle-graph ').circliful();
