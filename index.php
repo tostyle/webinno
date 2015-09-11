@@ -25,8 +25,11 @@
   $modalAward   = new \Model\ModalAward($db,$language);
   $modalAboutUs   = new \Model\ModalAboutUs($db,$language);
   $modalService   = new \Model\ModalService($db,$language);
+  $modalCareer   = new \Model\ModalCareer($db,$language);
   $graphModel = new \Model\Graph($db);
   $graph = $graphModel->getData();
+  $modalCareerData = $modalCareer->getData($language);
+  
   
   /* Controllers */
   $menuController     = new \Controller\Menu();
