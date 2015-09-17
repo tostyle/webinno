@@ -14,6 +14,11 @@
 				$name  = $content['name'];
 				$contents[ $index ] = $content['detail'];
 			}
+			if($this->language =='th')
+				$contents['download_map'] = 'ดาวโหลดแผนที่';
+			else
+				$contents['download_map'] = 'Download Map';
+			
 			return $contents;
 		}
 		public function getContent( $model )

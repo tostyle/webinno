@@ -20,5 +20,5 @@
 	<p><span>Tel : </span> <?=$contents['footer']['tel']?></p>
 	<p><span>Fax : </span> <?=$contents['footer']['fax']?></p>
 	<p><span>Email : </span> <?=$contents['footer']['email']?></p>
-	<p class="map-download"><a target="_blank" href="<?=$contents['footer']['map']?>">ดาวโหลดแผนที่</a></p>
+	<p class="map-download"><a target="_blank" href="<?=$contents['footer']['map']?>"><?=$contents['footer']['download_map']?></a></p>
 </div>

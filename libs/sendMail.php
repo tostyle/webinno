@@ -9,10 +9,10 @@
     $mail->Host = "smtp.gmail.com";
     $mail->Port = 465; // or 587
     $mail->IsHTML(true);
-    $mail->Username = "ttwtnt2d@gmail.com";
-    $mail->Password = "tt2038353";
+    $mail->Username = "innovation.inno@gmail.com";
+    $mail->Password = "inno";
     $mail->CharSet = 'UTF-8';
-    $mail->SetFrom("ttwtnt2d@gmail.com"); 
+    $mail->SetFrom("innovation.inno@gmail.com"); 
 
      $mail->Subject = 'สมัครงาน ตำแหน่ง '.$_POST['position'];
     $mail->Body = "<p>ชื่อ : {$_POST['registerName']}</p>";

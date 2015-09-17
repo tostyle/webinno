@@ -116,7 +116,7 @@
           หลักสูตรอบรมด้านพลังงาน">
 
     <title>Innovation Technology</title>
-
+    <link rel="icon" type="image/ico" href="photo/favicon2.ico"/>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/jquery.bxslider.css" rel="stylesheet">
