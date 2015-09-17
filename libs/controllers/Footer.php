@@ -23,6 +23,7 @@
 		}
 		public function getContent( $model )
 		{
+			$this->language = $model->language;
 			$datas  = $model->getData();
 			$contents = $this->setContent( $datas );
 			return $contents;
