@@ -209,10 +209,17 @@ $root = '../';
     }
     function uploadPic()
     {
+
+ ini_set('display_errors', 1);
+ error_reporting(E_ALL);
         $app = Slim::getInstance();
         $content = json_decode($_POST['contentDetail']);
         $targetDir = dirname($content->detail);
         $targetFile = $targetDir."/".$_FILES["file"]["name"];
+        if(file_exists($targetFile) ) {
+            // chmod('your-filename.ext',0755); //Change the file permissions if allowed
+            unlink($targetFile); //remove the file
+        }
         if(move_uploaded_file($_FILES["file"]["tmp_name"],'../'.$targetFile))
         {
            $sql="UPDATE content SET detail='{$targetFile}' WHERE id='{$content->id}'";
@@ -225,7 +232,7 @@ $root = '../';
         {
             $result['error']=true;
         }
-        return json_encode($result);
+        echo json_encode($result);
     }
     function updateContent(){
         $app = Slim::getInstance();
