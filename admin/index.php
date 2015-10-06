@@ -209,9 +209,6 @@ $root = '../';
     }
     function uploadPic()
     {
-
- ini_set('display_errors', 1);
- error_reporting(E_ALL);
         $app = Slim::getInstance();
         $content = json_decode($_POST['contentDetail']);
         $targetDir = dirname($content->detail);
